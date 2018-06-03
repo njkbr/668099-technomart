@@ -228,7 +228,7 @@
 						Кредит
 					</a>
 					<h3>Кредит</h3>
-					<p>Кредит  Залезть в долговую яму стало проще!<br>
+					<p>Залезть в долговую яму стало проще!<br>
 					Кредитные консультанты придут вам на помощь.</p>
 					<img src="http://placehold.it/200x200" alt="img_money">
 					<a class="btn-loan-app" href="#">Отправить заявку</a>
@@ -303,15 +303,23 @@
   			</p>
 
 	  		<div class="footer-bottom-social">
-	        	<a class="btn-social" href="#">
-	        		<img src="http://placehold.it/40x40" alt="Наша страничка ВКонтакте"> <!-- VK -->
-	        	</a>
-	        	<a class="btn-social" href="#">
-	        		<img src="http://placehold.it/40x40" alt="Наша группа в Фейсбуке"> <!-- FB -->
-	        	</a>
-	        	<a class="btn-social" href="#">
-	        		<img src="http://placehold.it/40x40" alt="Наши фото в Инстаграмме"> <!-- INSTA -->
-	        	</a>
+	  			<ul>
+	  				<li>
+			        	<a class="btn-social" href="#">
+			        		<img src="http://placehold.it/40x40" alt="Наша страничка ВКонтакте"> <!-- VK -->
+			        	</a>
+			        </li>
+			        <li>
+			        	<a class="btn-social" href="#">
+			        		<img src="http://placehold.it/40x40" alt="Наша группа в Фейсбуке"> <!-- FB -->
+			        	</a>
+			        </li>
+			        <li>
+			        	<a class="btn-social" href="#">
+			        		<img src="http://placehold.it/40x40" alt="Наши фото в Инстаграмме"> <!-- INSTA -->
+			        	</a>
+		        	</li>
+	        	</ul>
 	        </div>
 
 	        <p class="footer-bottom-feedback">
@@ -326,6 +334,26 @@
   		</div>
   		
   	</footer>
+
+  	<section class="modal modal-write">                <!-- Форма для письма. Думаю, что надо таблицей пределать. -->
+  		<form action="#" method="post">
+  			<label>
+  				Ваше имя:<br>
+  				<input type="text" name="name" id="customer-name" value="Имя Фамилия">
+  			</label>
+  			<label>
+  				Ваш e-mail:<br>
+  				<input type="text" name="email" id="customer-email" value="email@example.com">
+  			</label>
+  			<br>
+  			<label>
+  				Текст письма:<br>
+  				<textarea name="comment" rows="3"></textarea>
+  			</label>
+  			<input type="submit" value="ОТПРАВИТЬ">
+  		</form>
+  		<span class="modal-close">X</span>		
+  	</section>
 
 
   </body>
