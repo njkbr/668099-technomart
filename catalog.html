@@ -15,7 +15,7 @@
 	  		<form action="#" method="post">
 	  			<label>
 	  				<img src="http://placehold.it/20x20">
-	  				<input type="text" name="search" id="catalog-search" value="Поиск:"> <!-- Не знаю, корректен ли здесь атрибут <value>, вроде "поиск" должен исчезать при клике --> 
+	  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:"> <!-- Вставить текстовое описание для "инпут" -->
 	  			</label>
 	  		</form>
 	  	</div>
@@ -32,24 +32,32 @@
 	  		<a class="btn-order" href="#">
 	  			Оформить заказ                             
 	  		</a>
-	  		
-	  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-
-	  		<div class="header-contacts">
-	  			<span class="btn-phone">
-	  				<img src="http://placehold.it/20x20">+7 (812) 555-05-55 <!-- Вроде похоже на кнопку с какой-то активностью, поэтому добавил класс -->
-	  			</span>
-	  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-	  		</div>
-
-	  		<ul class="user-nav">
-	  			<li class="login-link"><img src="http://placehold.it/20x20">Войти</li>
-	  			<li class="reg-link">Регистрация</li>
-	  		</ul>
 	  	</div>
 
+  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+
+  		<div class="header-contacts">
+  			<span class="phone">
+  				<img src="http://placehold.it/20x20">+7 (812) 555-05-55
+  			</span>
+  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+  		</div>
+
+  		<form action="#" method="get">
+  			<label>
+  				<img src="http://placehold.it/20x20"">
+  				<input type="" name="">                                <!-- Что сюда ставить, пока не знаю -->
+  				<img src="http://placehold.it/20x20"">
+  			</label>  			 
+  		</form>
+
+  		<ul class="user-nav">
+  			<li class="my-order"><a href="#">Мои заказы</a></li>
+  			<li class="my-setting"><a href="#">Личный кабинет</a></li>
+  		</ul>
+	  	
   		<nav class="main-nav">
-  			<ul class="site-nav">
+  			<ul class="site-nav">                         <!-- Ссылки пока оставил -->
 	  			<li><a href="index.html">Главная</a></li>
 	          	<li><a href="about.html">Компания</a></li>
 	          	<li><a href="catalog.html">Каталог</a></li>
@@ -62,15 +70,17 @@
   	</header>
 
   	<main class="container">
-  		<section class="catalog-title">  <!-- Как оформить дерево каталога, пока не знаю -->
+  		<section class="catalog-title">  <!-- Как оформить дерево каталога, пока не знаю -->        <!--Пока не знаю как сетку ниже делать-->
   			<h2>ПЕРФОРАТОРЫ</h2>
   		</section>
 
   		<section class="filter">                                                   <!-- Фильтр -->
-  			<p>ФИЛЬТР:</p>
+  			<h2 class="visually-hidden">Фильтр:</h2>
+
+  			<p>Фильтр</p>
 
   			<div class="brands">
-  				<b>ПРОИЗВОДИТЕЛИ:</b>
+  				<b>Производители:</b>
   				<form action="#" method="post">
   					<input type="checkbox" name="bosch" id="" checked>BOSCH
   					<input type="checkbox" name="interskol" id="" checked>ИНТЕРСКОЛ
@@ -81,114 +91,122 @@
   			</div>
 
   			<div class="power">
-  				<b>ПИТАНИЕ:</b>
+  				<b>Питание:</b>
   				<form action="#" method="post">
-  					<input type="checkbox" name="battery" id="" checked>АККУМУЛЯТОРНЫЕ
-  					<input type="checkbox" name="electric" id="" checked>СЕТЕВЫЕ
+  					<input type="checkbox" name="battery" id="" checked>Аккумуляторные
+  					<input type="checkbox" name="electric" id="" checked>Сетевые
+  					<input type="submit" name="showme" id="" value="Показать" title="Показать выбранные">
   				</form>  
   			</div>
   		</section>
 
   		<section>
-  			<p>СОРТИРОВКА</p>              <!-- Сортировка -->
+  			<h2>Сортировка</h2>
 
-  			<form action="#" method="post">  <!-- Оформил "радиобаттоном", по-другому пока не умею. Также не умею алфавитный порядок формиовать -->
-  				<label>
-  					<input type="radio" name="sorting" value="price" checked> ПО ЦЕНЕ
-  				</label>
-  				<label>
-  					<input type="radio" name="sorting" value="type"> ПО ТИПУ
-  				</label>
-  				<label>
-  					<input type="radio" name="sorting" value="function"> ПО ФУНКЦИОНАЛУ
-  				</label>
+  			<p>Сортировка</p>              <!-- Сортировка -->
+
+  			<form action="#" method="post">
+  				<div class="PTFsorting">
+	  				<label>
+	  					<input type="radio" name="PTFsorting" value="price" checked> По цене
+	  				</label>
+
+	  				<label>
+	  					<input type="radio" name="PTFsorting" value="type"> По типу
+	  				</label>
+
+	  				<label>
+	  					<input type="radio" name="PTFsorting" value="function"> По функционалу
+	  				</label>
+  				</div>
+
+  				<div class="AZsorting">
+  					<label>
+	  					<input type="radio" name="AZsorting" value="A-Z" title="Сортировка «А-Я»"checked><img src="http://placehold.it/5x5">
+	  				</label>
+
+	  				<label>
+	  					<input type="radio" name="AZsorting" value="Z-A" title="Сортировка «Я-А»"><img src="http://placehold.it/5x5">
+	  				</label>
+  				</div>
   			</form>
   		</section>
 
-  		<section class="main-catalog">                 <!-- Возможно каталог лучше таблицей верстать? И как делать измененную форму при наведении мышкой, не знаю -->
-  			<div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 3000</h3>
-				<p>22500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>15500 Р.</b>
-				</a>
-	        </div>
+  		<section class="main-catalog">
+  			<h2 class="visually-hidden">Каталог товаров</h2>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 6000</h3>
-				<p>30500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>25500 Р.</b>
-				</a>
-	        </div>
+  			<div class="main-catalog-items">
+	  			<div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 3000</h3>
+					<p>22500 Р.</p>                                             
+					<p>15500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 2000</h3>
-				<p class="hidden-price">22500 Р.</p>                                             <!-- Перечеркивается стилями?           YНужен ли сюда отдельный класс?--> 
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>12500 Р.</b>
-				</a>
-	        </div>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p>30500 Р.</p>
+					<p>25500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 3000</h3>
-				<p>22500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>15500 Р.</b>
-				</a>
-	        </div>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 6000</h3>
-				<p>30500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>25500 Р.</b>
-				</a>
-	        </div>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 3000</h3>
+					<p>22500 Р.</p>                                             
+					<p>15500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 2000</h3>
-				<p class="hidden-price">22500 Р.</p>                                             <!-- Перечеркивается стилями?           YНужен ли сюда отдельный класс?--> 
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>12500 Р.</b>
-				</a>
-	        </div>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p>30500 Р.</p>
+					<p>25500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 3000</h3>
-				<p>22500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>15500 Р.</b>
-				</a>
-	        </div>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 6000</h3>
-				<p>30500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>25500 Р.</b>
-				</a>
-	        </div>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 3000</h3>
+					<p>22500 Р.</p>                                             
+					<p>15500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 2000</h3>
-				<p class="hidden-price">22500 Р.</p>                                             <!-- Перечеркивается стилями?           YНужен ли сюда отдельный класс?--> 
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>12500 Р.</b>
-				</a>
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p>30500 Р.</p>
+					<p>25500 Р.</p>
+		        </div>
+
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+		        </div>
+			</div>
+
+	        <div class="modal-buy">                                  <!-- 	форма "покупки"" и "в_закладки"" -->
+	        	<span class="btn-cart"><img src="http://placehold.it/20x20">Купить</span>
+	        	<span class="btn-bookmarks">В закладки</span>
 	        </div>
   		</section>
 
-  		<section class="catalog-pages">
+  		<section class="catalog-pages">   <!-- активная страница, на которой находишься в даннй момент, в постраничной навигации ссылкой не является, достаточно просто убрать атрибут href и повесить доп.класс, например .active -->                    <!--  Пока не понял как исправить -->
   			<span class="bnt-page">1</span>
   			<span class="bnt-page">2</span>
   			<span class="bnt-page">3</span>
@@ -242,48 +260,45 @@
   				Все права защищены
   			</p>
 
-	  		<div class="footer-bottom-social">
-	        	<ul>
-	  				<li>
-			        	<a class="btn-social" href="#">
-			        		<img src="http://placehold.it/40x40" alt="Наша страничка ВКонтакте"> <!-- VK -->
-			        	</a>
-			        </li>
-			        <li>
-			        	<a class="btn-social" href="#">
-			        		<img src="http://placehold.it/40x40" alt="Наша группа в Фейсбуке"> <!-- FB -->
-			        	</a>
-			        </li>
-			        <li>
-			        	<a class="btn-social" href="#">
-			        		<img src="http://placehold.it/40x40" alt="Наши фото в Инстаграмме"> <!-- INSTA -->
-			        	</a>
-		        	</li>
-	        	</ul>
-	        </div>
+  			<ul class="footer-bottom-social">
+  				<li>
+		        	<a class="btn-social" href="#">
+		        		<img src="http://placehold.it/40x40" alt="Наша страничка ВКонтакте"> <!-- VK -->
+		        	</a>
+		        </li>
+		        <li>
+		        	<a class="btn-social" href="#">
+		        		<img src="http://placehold.it/40x40" alt="Наша группа в Фейсбуке"> <!-- FB -->
+		        	</a>
+		        </li>
+		        <li>
+		        	<a class="btn-social" href="#">
+		        		<img src="http://placehold.it/40x40" alt="Наши фото в Инстаграмме"> <!-- INSTA -->
+		        	</a>
+	        	</li>
+        	</ul>
 
 	        <p class="footer-bottom-feedback">
-	          Обратная связь:<br>
-	          <a href="#">mail@htmlacademy.ru</a> <!-- Не знаю как правильно ставть мейл-линк -->
+	          Обратная связь:
+	          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 	        </p>
 
 	        <p class="footer-bottom-creator">
-	          Разработано —<br>
-	          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+	          Разработано —
+	          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
 	        </p>
   		</div>
-  		
   	</footer>
 
   	<section class="modal-cart">
   		<b>Товар добавлен в корзину!</b>
 
   		<div class="cart-order-choice">
-	  		<a class="btn-order" href="#">ОФОРМИТЬ ЗАКАЗ</a>
-	  		<span class="btn-close">ПРОДОЛЖИТЬ ПОКУПКИ</span>               <!-- По-моему, одно и то же смысловое действие с "modal-close" -->
+	  		<a class="btn-order" href="#">Оформить заказ</a>
+	  		<span class="btn-close">Продолжить покупки</span>               <!-- Кнопка закрывает форму --> 
   		</div>
 
-  		<span class="modal-close">X</span>                                <!-- По-моему, одно и то же смысловое действие с "btn-close" -->
+  		<span class="modal-close">X</span>                                <!-- Крест закрывает форму" -->
   	</section>
 
 
