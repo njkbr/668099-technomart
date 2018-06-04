@@ -8,14 +8,14 @@
   <body>
   	<header class="main-header">
   		<div class="left-header-container">
-	  		<a class="main-header-logo" href="index.html">
+	  		<a class="main-header-logo">
 	  			<img src="http://placehold.it/150x50" alt="Логотип магазина стройматериалов «Техномарт»" width="" height="">
 	  		</a>
 
 	  		<form action="#" method="post">
 	  			<label>
 	  				<img src="http://placehold.it/20x20">
-	  				<input type="text" name="search" id="catalog-search" value="Поиск:"> <!-- Не знаю, корректен ли здесь атрибут <value>, вроде "поиск" должен исчезать при клике --> 
+	  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:"> <!-- Вставить текстовое описание для "инпут" -->
 	  			</label>
 	  		</form>
 	  	</div>
@@ -32,24 +32,24 @@
 	  		<a class="btn-order" href="#">
 	  			Оформить заказ                             
 	  		</a>
-	  		
-	  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-
-	  		<div class="header-contacts">
-	  			<span class="btn-phone">
-	  				<img src="http://placehold.it/20x20">+7 (812) 555-05-55 <!-- Вроде похоже на кнопку с какой-то активностью, поэтому добавил класс -->
-	  			</span>
-	  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-	  		</div>
-
-	  		<ul class="user-nav">
-	  			<li class="login-link"><img src="http://placehold.it/20x20">Войти</li>
-	  			<li class="reg-link">Регистрация</li>
-	  		</ul>
 	  	</div>
 
+  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+
+  		<div class="header-contacts">
+  			<span class="phone">
+  				<img src="http://placehold.it/20x20">+7 (812) 555-05-55
+  			</span>
+  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+  		</div>
+
+  		<ul class="user-nav">
+  			<li class="login-link"><a href="#"><img src="http://placehold.it/20x20">Войти</a></li>
+  			<li class="reg-link"><a href="#">Регистрация</a></li>
+  		</ul>
+	  	
   		<nav class="main-nav">
-  			<ul class="site-nav">
+  			<ul class="site-nav">                         <!-- Ссылки пока оставил -->
 	  			<li><a href="index.html">Главная</a></li>
 	          	<li><a href="about.html">Компания</a></li>
 	          	<li><a href="catalog.html">Каталог</a></li>
@@ -63,133 +63,147 @@
 
   	<main class="container">
   		<section class="catalog-menu">
-  			<nav class="catalog-nav">
+  			<h2 class="visually-hidden">Каталог товаров, спецпредложения и скидки</h2>
+
+  			<nav class="catalog-nav-top">
   				<ul>
   					<li>
-  						<h2>Материалы</h2>
+  						<h3>Материалы</h3>
   						<img src="http://placehold.it/200x100">
-  						<a class="btn-catalog-nav" href="constructions.html">НА ЛЮБОЙ ВКУС</a>
+  						<a class="btn-catalog-nav" href="constructions.html">На любой вкус</a>
   					</li>
   					<li>
-  						<h2>Инструмент</h2>
+  						<h3>Инструмент</h3>
   						<img src="http://placehold.it/200x100">
-  						<a class="btn-catalog-nav" href="tools.html">НА ВСЕ СЛУЧАИ</a>
+  						<a class="btn-catalog-nav" href="tools.html">На все случаи</a>
   					</li>
   					<li>
-  						<h2>Техника</h2>
+  						<h3>Техника</h3>
   						<img src="http://placehold.it/200x100">
-  						<a class="btn-catalog-nav" href="technics.html">ДЛЯ СТРОЙКИ</a>
-  					</li>
-  					<li>
-  						<h2>Скидки 50%</h2>
-  						<img src="http://placehold.it/200x100">
-  						<a class="btn-catalog-nav" href="offers.html">НА 350 ТОВАРОВ</a>
-  					</li>
-  					<li>
-  						<h2>Доставка</h2>
-  						<img src="http://placehold.it/200x100">
-  						<a class="btn-catalog-nav" href="shipping.html">БЕСПЛАТНО</a>
-  					</li>
-  				</ul>
+  						<a class="btn-catalog-nav" href="technics.html">Для стройки</a>
+  					</li>  					
+  				</ul>  					
   			</nav>
-  		</section>
 
-  		<section class="promo">
-  			<div>
-  				<h2 class="promo-heading">
-  					ДРЕЛИ
-  				</h2>
-  				<p>
-  					Соседям на радость!
-  				</p>
-				<img src="http://placehold.it/400x200" alt="img_drill">
-  				<span class="btn-slider btn-slider-back"><img src="http://placehold.it/10x30"></span> <!-- Кнопки слайдера -->
-  				<span class="btn-slider btn-slider-next"><img src="http://placehold.it/10x30"></span> <!-- Кнопки слайдера -->
-  				<a href="catalog.html"></a>
+  			<div class="promo-slider">
+	  			<div class="promo-slider-drill">
+	  				<h3>
+	  					Дрели
+	  				</h3>
+	  				<p>
+	  					Соседям на радость!
+	  				</p>
+					<img src="http://placehold.it/400x200" alt="img_drill">  				
+	  			</div>
+
+	  			<div class="promo-slider-perforator">
+	  				<h3>
+	  					Перфораторы
+	  				</h3>
+	  				<p>
+	  					Настоящие мужские игрушки!
+	  				</p>
+	  				<img src="http://placehold.it/400x200" alt="img_perforator">  				
+	  			</div>
+	  		</div>
+
+  			<div class="promo-slider-control">                 <!-- Не знаю куда управление слайдером вставить, пока здесь -->
+  				<span class="btn-slider btn-slider-back"><img src="http://placehold.it/10x30"></span>
+  				<span class="btn-slider btn-slider-next"><img src="http://placehold.it/10x30"></span>
+  				<span class="btn-slider btn-slider-1"><img src="http://placehold.it/5x5"></span>
+  				<span class="btn-slider btn-slider-2"><img src="http://placehold.it/5x5"></span>
+  				<a href="catalog.html">Открыть каталог</a>
   			</div>
 
-  			<div>
-  				<h2 class="promo-heading">
-  					ПЕРФОРАТОРЫ
-  				</h2>
-  				<p>
-  					Настоящие мужские игрушки!
-  				</p>
-  				<img src="http://placehold.it/400x200" alt="img_perforator">
-  				<span class="btn-slider btn-slider-back"><img src="http://placehold.it/10x30"></span> <!-- Кнопки слайдера -->
-  				<span class="btn-slider btn-slider-next"><img src="http://placehold.it/10x30"></span> <!-- Кнопки слайдера -->
-  				<a href="catalog.html"></a>
-  			</div>
-  		</section>
+  			<nav class="catalog-nav-right">
+  				<ul>
+  					<li>
+  						<h3>Скидки 50%</h3>
+  						<img src="http://placehold.it/200x100">
+  						<a class="btn-catalog-nav" href="offers.html">На 350 товаров</a>
+  					</li>
+  					<li>
+  						<h3>Доставка</h3>
+  						<img src="http://placehold.it/200x100">
+  						<a class="btn-catalog-nav" href="shipping.html">Бесплатно</a>
+  					</li>
+  				</ul>  				
+  			</nav>
+  		</section>  		
 
   		<section class="popular-items">
-  			<h2>
-  				Популярные товары                                             <!-- Нужно ли писать прописными сразу как в макете? Или это поправляестся стилями? -->
-  			</h2>
+  			<h2 class="visually-hidden">Популярные товары</h2>
+  			<div>                    <!-- Если нужно объединить в один контейнер, правильно ли добавлять скрытый заголовок выше?-->
+  				<h3>
+  				Популярные товары
+	  			</h3>
 
-  			<a class="btn-popular-items" href="#" title="Посмотреть все популярные товары"> <!-- Не знаю какую ссылку ставить. На "offers"? -->
-  				Все популярные товары
-  			</a>
+	  			<a class="btn-popular-items" href="#" title="Посмотреть все популярные товары">
+	  				Все популярные товары
+	  			</a>
+  			</div>
+  			
+  			<div class="popular-items-catalog">
+  				<div class="popular-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 9000" width="" height="">
+					<h4>Перфоратор BOSCH BFG 9000</h4>
+					<p>32500 Р.</p>
+					<p>25500 Р.</p>
+				</div>
 
-  			<div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 9000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 9000</h3>
-				<p>32500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>25500 Р.</b>
-				</a>
-	        </div>
+		        <div class="popular-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h4>Перфоратор BOSCH BFG 3000</h4>
+					<p>22500 Р.</p>					
+					<p>15500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 3000</h3>
-				<p>22500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>15500 Р.</b>
-				</a>
-	        </div>
+		        <div class="popular-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h4>Перфоратор BOSCH BFG 6000</h4>
+					<p>30500 Р.</p>					
+					<p>25500 Р.</p>
+		        </div>
 
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 6000</h3>
-				<p>30500 Р.</p>                                             <!-- Перечеркивается стилями? -->
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
-					<b>25500 Р.</b>
-				</a>
-	        </div>
-
-	        <div class="catalog-item">
-				<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
-				<h3>Перфоратор BOSCH BFG 2000</h3>
-				<p class="hidden-price">22500 Р.</p>                                             <!-- Перечеркивается стилями?           YНужен ли сюда отдельный класс?--> 
-				<a class="btn-catalog-item" href="#">                                     <!-- Ссылку на какую страницу ставить? Карточка товара? Или корзина?-->
+		        <div class="popular-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h4>Перфоратор BOSCH BFG 2000</h4>
+					<p class="hidden-price">22500 Р.</p> <!-- Нужен ли сюда отдельный класс? -->
 					<b>12500 Р.</b>
-				</a>
-	        </div>
+		        </div>
+
+		        <div class="modal-buy">                       <!-- 	форма покупки-в закладки -->
+		        	<span class="btn-cart"><img src="http://placehold.it/20x20">Купить</span>
+		        	<span class="btn-bookmarks">В закладки</span>
+		        </div>
+  			</div>  			
 		</section>
 
 		<section class="popular-brands">
-			<h2>
+			<h2 class="visually-hidden">Популярные производители</h2>
+			<div>
+				<h3>
   				Популярные производители
-  			</h2>
+	  			</h3>
 
-  			<a class="btn-popular-brands" href="#" title="Посмотреть всех популярных производителей">
-  				Все популярные производители
-  			</a>
-
-  			<ul class=catalog-brands>                                                                            <!-- Может здесь "дивы" нужны? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="BOSCH" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Makita" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="DeWALT" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Interskol" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Hitachi" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="LG" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="AEG" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
-  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Metabo" width="" height=""></a></li> <!-- Линк на выборку по производителям или на сайт производителя? -->
+	  			<a class="btn-popular-brands" href="#" title="Посмотреть всех популярных производителей">
+	  				Все популярные производители
+	  			</a>
+			</div>
+			
+  			<ul class="catalog-brands">
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="BOSCH" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Makita" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="DeWALT" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Interskol" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Hitachi" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="LG" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="AEG" width="" height=""></a></li>
+  				<li><a href="#"><img src="http://placehold.it/150x100" alt="Metabo" width="" height=""></a></li>
   			</ul>
 		</section>
 
-		<section class="services">                                   <!-- Не уверен, что правильно списком верстать  этот контейнер, т.к. из макета не очень понятна концепция. -->
+		<section class="services">
 			<h2>
 				Сервисы
 			</h2>
@@ -198,76 +212,86 @@
 				Хороший интернет-магазин отличается от плохого не только ценами!<br>
 				Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
 			</p>
-			
-			<ul class="catalog-services">
-				<li>
-					<a href="#">                                <!-- Вроде как линком меняется информация справа -->
-						Доставка
-					</a>
-					<h3>Доставка</h3>
-					<p>Мы с удовольствием доставим ваш товар прямо<br>
+			<div class="promo-services">
+				<div class="services-slider-control">                 <!-- Не знаю куда управление слайдером вставить, пока здесь -->
+	  				<span class="btn-slider-3">Доставка</span>
+	  				<span class="btn-slider-4">Гарантия</span>
+	  				<span class="btn-slider-5">Кредит</span>
+	  			</div>
+
+				<div class="services-slider">
+					<div class="services-slider-shipping">					
+						<h3>Доставка</h3>
+						<p>Мы с удовольствием доставим ваш товар прямо<br>
 						к вашему подъезду совершенно бесплатно!<br>
 						Ведь мы неплохо заработаем,<br>
 						поднимая его на ваш этаж!</p>
 						<img src="http://placehold.it/200x200" alt="img_track">
-				</li>
-				<li>
-					<a href="#">                                <!-- Вроде как линком меняется информация справа -->
-						Гарантия
-					</a>
-					<h3>Гарантия</h3>
-					<p>Если купленный у нас товар поломается или заискрит,<br>
+					</div>
+
+					<div class="services-slider-guarantee">					
+						<h3>Гарантия</h3>
+						<p>Если купленный у нас товар поломается или заискрит,<br>
 						а также в случае пожара, спровоцированного его возгаранием,<br>
 						вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
 						сгоревший товар на новый.<br>
 						Дом уж восстановите как-нибудь сами.</p>
-						<img src="http://placehold.it/200x200" alt="img_guaranty">
-				</li>
-				<li>
-					<a href="#">                                <!-- Вроде как линком меняется информация справа -->
-						Кредит
-					</a>
-					<h3>Кредит</h3>
-					<p>Залезть в долговую яму стало проще!<br>
-					Кредитные консультанты придут вам на помощь.</p>
-					<img src="http://placehold.it/200x200" alt="img_money">
-					<a class="btn-loan-app" href="#">Отправить заявку</a>
-				</li>
-			</ul>
+						<img src="http://placehold.it/200x200" alt="img_guarantee">
+					</div>
+					
+					<div class="services-slider-loan">					
+						<h3>Кредит</h3>
+						<p>Залезть в долговую яму стало проще!<br>
+						Кредитные консультанты придут вам на помощь.</p>
+						<img src="http://placehold.it/200x200" alt="img_money">
+						<a class="btn-loan-app" href="#">Отправить заявку</a>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section class="company-information">
-			<h2>
-				КОМПАНИЯ «ТЕХНОМАРТ»
-			</h2>
-			<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br>
-				строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br><br>
-				Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-				Техномарт работает со многими транспортными компаниями:</p>
-			<ul>
-				<li><span>—</span> Деловые линии</li>
-				<li><span>—</span> Автотрейдинг</li>
-				<li><span>—</span> ЖелДорЭкспедиция</li>
-			</ul>
-			<a class="btn-company-about" href="about.html">
-				Подробнее о компании
-			</a>
-		</section>
+		<section class="about-company">
+			<h2 class="visually-hidden">Информация о компании</h2>
 
-		<section class="company-contacts">
-			<h2>
-				КОНТАКТЫ
-			</h2>
-			<p>Вы можете забрать товар сами,<br>
-			заехав в наш офис:</p>
-			<a href="#"><img src="http://placehold.it/150x150" alt="карта местонахождения"></a>
-			<a class="btn-contacts" href="#">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
+			<div class="company-information">			
+				<h3>
+					КОМПАНИЯ «ТЕХНОМАРТ»
+				</h3>
+
+				<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br>
+					строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br><br>
+					Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+					Техномарт работает со многими транспортными компаниями:</p>
+
+				<ul>
+					<li>— Деловые линии</li>
+					<li>— Автотрейдинг</li>
+					<li>— ЖелДорЭкспедиция</li>
+				</ul>
+
+				<a class="btn-company-about" href="about.html">
+					Подробнее о компании
+				</a>
+			</div>
+
+			<div class="company-contacts">
+				<h3>
+					КОНТАКТЫ
+				</h3>
+
+				<p>Вы можете забрать товар сами,<br>
+				заехав в наш офис:</p>
+
+				<a href="#"><img src="http://placehold.it/150x150" alt="карта местонахождения"></a>
+
+				<a class="btn-contacts" href="#">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
+			</div>
 		</section>
   	</main>
 
   	<footer class="main-footer">
   		<div class="footer-top">
-  			<a class="footer-top-logo" href="index.html">
+  			<a class="footer-top-logo">
 	  			<img src="http://placehold.it/150x50" alt="Логотип магазина стройматериалов «Техномарт»" width="" height="">
 	  		</a>
 
@@ -302,34 +326,32 @@
   				Все права защищены
   			</p>
 
-	  		<div class="footer-bottom-social">
-	  			<ul>
-	  				<li>
-			        	<a class="btn-social" href="#">
-			        		<img src="http://placehold.it/40x40" alt="Наша страничка ВКонтакте"> <!-- VK -->
-			        	</a>
-			        </li>
-			        <li>
-			        	<a class="btn-social" href="#">
-			        		<img src="http://placehold.it/40x40" alt="Наша группа в Фейсбуке"> <!-- FB -->
-			        	</a>
-			        </li>
-			        <li>
-			        	<a class="btn-social" href="#">
-			        		<img src="http://placehold.it/40x40" alt="Наши фото в Инстаграмме"> <!-- INSTA -->
-			        	</a>
-		        	</li>
-	        	</ul>
-	        </div>
+  			<ul class="footer-bottom-social">
+  				<li>
+		        	<a class="btn-social" href="#">
+		        		<img src="http://placehold.it/40x40" alt="Наша страничка ВКонтакте"> <!-- VK -->
+		        	</a>
+		        </li>
+		        <li>
+		        	<a class="btn-social" href="#">
+		        		<img src="http://placehold.it/40x40" alt="Наша группа в Фейсбуке"> <!-- FB -->
+		        	</a>
+		        </li>
+		        <li>
+		        	<a class="btn-social" href="#">
+		        		<img src="http://placehold.it/40x40" alt="Наши фото в Инстаграмме"> <!-- INSTA -->
+		        	</a>
+	        	</li>
+        	</ul>
 
 	        <p class="footer-bottom-feedback">
-	          Обратная связь:<br>
-	          <a href="#">mail@htmlacademy.ru</a> <!-- Не знаю как правильно ставть мейл-линк -->
+	          Обратная связь:
+	          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 	        </p>
 
 	        <p class="footer-bottom-creator">
-	          Разработано —<br>
-	          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+	          Разработано —
+	          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
 	        </p>
   		</div>
   		
