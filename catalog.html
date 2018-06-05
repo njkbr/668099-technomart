@@ -7,55 +7,59 @@
   </head>
   <body>
   	<header class="main-header">
-  		<div class="left-header-container">
-	  		<a class="main-header-logo" href="index.html">
-	  			<img src="http://placehold.it/150x50" alt="Логотип магазина стройматериалов «Техномарт»" width="" height="">
-	  		</a>
+  		<div class="top-header">
+	  		<div class="top-left-header">
+		  		<a class="main-header-logo" href="index.html">
+		  			<img src="http://placehold.it/150x50" alt="Логотип магазина стройматериалов «Техномарт»" width="" height="">
+		  		</a>
 
-	  		<form action="#" method="post">
+		  		<form action="#" method="post">
+		  			<label>
+		  				<img src="http://placehold.it/20x20">
+		  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:"> <!-- Вставить текстовое описание для "инпут" -->
+		  			</label>
+		  		</form>
+		  	</div>
+
+		  	<div class="right-header-container">
+		  		<a class="bookmarks" href="#">
+		  			<img src="http://placehold.it/20x20">Закладки 
+		  		</a>
+
+		  		<a class="cart" href="#">
+		  			<img src="http://placehold.it/20x20">Корзина 
+		  		</a>
+
+		  		<a class="btn-order" href="#">
+		  			Оформить заказ                             
+		  		</a>
+		  	</div>
+	  	</div>
+
+  		<div class="middle-header">
+	  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+
+	  		<div class="header-contacts">
+	  			<span class="phone">
+	  				<img src="http://placehold.it/20x20">+7 (812) 555-05-55
+	  			</span>
+	  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+	  		</div>
+
+	  		<form action="#" method="get">
 	  			<label>
-	  				<img src="http://placehold.it/20x20">
-	  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:"> <!-- Вставить текстовое описание для "инпут" -->
-	  			</label>
+	  				<img src="http://placehold.it/20x20"">
+	  				<input type="" name="">                                <!-- Что сюда ставить, пока не знаю -->
+	  				<img src="http://placehold.it/20x20"">
+	  			</label>  			 
 	  		</form>
+
+	  		<ul class="user-nav">
+	  			<li class="my-order"><a href="#">Мои заказы</a></li>
+	  			<li class="my-setting"><a href="#">Личный кабинет</a></li>
+	  		</ul>
 	  	</div>
 
-	  	<div class="right-header-container">
-	  		<a class="bookmarks" href="#">
-	  			<img src="http://placehold.it/20x20">Закладки 
-	  		</a>
-
-	  		<a class="cart" href="#">
-	  			<img src="http://placehold.it/20x20">Корзина 
-	  		</a>
-
-	  		<a class="btn-order" href="#">
-	  			Оформить заказ                             
-	  		</a>
-	  	</div>
-
-  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-
-  		<div class="header-contacts">
-  			<span class="phone">
-  				<img src="http://placehold.it/20x20">+7 (812) 555-05-55
-  			</span>
-  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-  		</div>
-
-  		<form action="#" method="get">
-  			<label>
-  				<img src="http://placehold.it/20x20"">
-  				<input type="" name="">                                <!-- Что сюда ставить, пока не знаю -->
-  				<img src="http://placehold.it/20x20"">
-  			</label>  			 
-  		</form>
-
-  		<ul class="user-nav">
-  			<li class="my-order"><a href="#">Мои заказы</a></li>
-  			<li class="my-setting"><a href="#">Личный кабинет</a></li>
-  		</ul>
-	  	
   		<nav class="main-nav">
   			<ul class="site-nav">                         <!-- Ссылки пока оставил -->
 	  			<li><a href="index.html">Главная</a></li>
@@ -71,7 +75,7 @@
 
   	<main class="container">
   		<section class="catalog-title">  <!-- Как оформить дерево каталога, пока не знаю -->        <!--Пока не знаю как сетку ниже делать-->
-  			<h2>ПЕРФОРАТОРЫ</h2>
+  			<h2>Перфораторы</h2>
   		</section>
 
   		<section class="filter">                                                   <!-- Фильтр -->
@@ -139,83 +143,214 @@
 	  			<div class="catalog-item">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 3000</h3>
-					<p>22500 Р.</p>                                             
+					<p class="hidden-price">22500 Р.</p>                                             
 					<p>15500 Р.</p>
-		        </div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
-		        <div class="catalog-item">
-					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
-					<h3>Перфоратор BOSCH BFG 6000</h3>
-					<p>30500 Р.</p>
-					<p>25500 Р.</p>
-		        </div>
-
-		        <div class="catalog-item">
-					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
-					<h3>Перфоратор BOSCH BFG 2000</h3>
-					<p class="hidden-price">22500 Р.</p>
-					<p>12500 Р.</p>
-		        </div>
-
-		        <div class="catalog-item">
+		        <div class="catalog-item catalog-item-new">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 3000</h3>
-					<p>22500 Р.</p>                                             
+					<p class="hidden-price">22500 Р.</p>                                             
 					<p>15500 Р.</p>
-		        </div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
 		        <div class="catalog-item">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 6000</h3>
-					<p>30500 Р.</p>
+					<p class="hidden-price">30500 Р.</p>
 					<p>25500 Р.</p>
-		        </div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+				<div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p class="hidden-price">30500 Р.</p>
+					<p>25500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
 		        <div class="catalog-item">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 2000</h3>
 					<p class="hidden-price">22500 Р.</p>
 					<p>12500 Р.</p>
-		        </div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
-		        <div class="catalog-item">
+				<div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+	  			<div class="catalog-item">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 3000</h3>
-					<p>22500 Р.</p>                                             
+					<p class="hidden-price">22500 Р.</p>                                             
 					<p>15500 Р.</p>
-		        </div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+		        <div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 3000</h3>
+					<p class="hidden-price">22500 Р.</p>                                             
+					<p>15500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
 		        <div class="catalog-item">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 6000</h3>
-					<p>30500 Р.</p>
+					<p class="hidden-price">30500 Р.</p>
 					<p>25500 Р.</p>
-		        </div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+				<div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p class="hidden-price">30500 Р.</p>
+					<p>25500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
 		        <div class="catalog-item">
 					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
 					<h3>Перфоратор BOSCH BFG 2000</h3>
 					<p class="hidden-price">22500 Р.</p>
 					<p>12500 Р.</p>
-		        </div>
-			</div>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
 
-	        <div class="modal-buy">                                  <!-- 	форма "покупки"" и "в_закладки"" -->
-	        	<span class="btn-cart"><img src="http://placehold.it/20x20">Купить</span>
-	        	<span class="btn-bookmarks">В закладки</span>
-	        </div>
+				<div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+	  			<div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 3000</h3>
+					<p class="hidden-price">22500 Р.</p>                                             
+					<p>15500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+		        <div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 3000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 3000</h3>
+					<p class="hidden-price">22500 Р.</p>                                             
+					<p>15500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p class="hidden-price">30500 Р.</p>
+					<p>25500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+				<div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 6000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 6000</h3>
+					<p class="hidden-price">30500 Р.</p>
+					<p>25500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+		        <div class="catalog-item">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+
+				<div class="catalog-item catalog-item-new">
+					<img src="http://placehold.it/100x100" alt="Перфоратор BOSCH BFG 2000" width="" height="">
+					<h3>Перфоратор BOSCH BFG 2000</h3>
+					<p class="hidden-price">22500 Р.</p>
+					<p>12500 Р.</p>
+					<div class="catalog-item-buttons">
+						<a href="#" class="btn-cart"><img src="http://placehold.it/20x20">Купить</a>
+						<a href="#" class="btn-bookmarks">В закладки</a>
+					</div>
+				</div>
+			</div>	        
   		</section>
 
-  		<section class="catalog-pages">   <!-- активная страница, на которой находишься в даннй момент, в постраничной навигации ссылкой не является, достаточно просто убрать атрибут href и повесить доп.класс, например .active -->                    <!--  Пока не понял как исправить -->
-  			<span class="bnt-page">1</span>
-  			<span class="bnt-page">2</span>
-  			<span class="bnt-page">3</span>
-  			<span class="bnt-page">СЛЕДУЮЩАЯ</span>
+  		<section class="catalog-pages">
+  			<h2 class="visually-hidden">Страницы каталога</h2>
+  			<a class="bnt-page bnt-page-activ">1</a>
+  			<a href="#" class="bnt-page">2</a>
+  			<a href="#" class="bnt-page">3</a>
+  			<a href="#" class="bnt-page">Следующая</a>
   		</section>
 
   		<section class="about perforators">
   			<h2>
-  				ПАРА СЛОВ О ПЕРФОРАТОРАХ
+  				Пара слов о перфораторах
   			</h2>
   			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
   				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br>
@@ -295,10 +430,10 @@
 
   		<div class="cart-order-choice">
 	  		<a class="btn-order" href="#">Оформить заказ</a>
-	  		<span class="btn-close">Продолжить покупки</span>               <!-- Кнопка закрывает форму --> 
+	  		<button class="btn-close">Продолжить покупки</button>               <!-- Кнопка закрывает форму --> 
   		</div>
 
-  		<span class="modal-close">X</span>                                <!-- Крест закрывает форму" -->
+  		<button class="modal-close">X</button>                                <!-- Крест закрывает форму" -->
   	</section>
 
 
