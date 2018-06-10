@@ -13,24 +13,25 @@
 		  			<img src="img/logo.png" alt="Логотип магазина стройматериалов «Техномарт»" width="220" height="47">
 		  		</a>
 
-		  		<form action="#" method="post">
-		  			<label>
+		  		<form action="https://htmlacademy.ru/echo" method="post">
+		  			<label class="visually-hidden">
+		  				Поиск по каталогу
 		  				<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-		  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:"> <!-- Вставить текстовое описание для "инпут" -->
+		  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:">
 		  			</label>
 		  		</form>
 		  	</div>
 
 		  	<div class="top-right-header">
-		  		<a class="bookmarks" href="#">
-		  			<img src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">Закладки 
+		  		<a class="bookmarks" href="bookmarks.html">
+		  			<img src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">Закладки
 		  		</a>
 
-		  		<a class="cart" href="#">
-		  			<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина">Корзина 
+		  		<a class="cart" href="cart.html">
+		  			<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина">Корзина
 		  		</a>
 
-		  		<a class="btn-order" href="#">
+		  		<a class="btn-order" href="order.html">
 		  			Оформить заказ                             
 		  		</a>
 		  	</div>
@@ -46,7 +47,7 @@
 	  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 	  		</div>
 
-	  		<form action="#" method="get">
+	  		<form action="https://htmlacademy.ru/echo" method="get">           
 	  			<label>
 	  				<img src="img/icon-user.svg" width="20" height="18" alt="Профиль">
 	  				<input type="" name="">                                <!-- Что сюда ставить, пока не знаю -->
@@ -55,8 +56,8 @@
 	  		</form>
 
 	  		<ul class="user-nav">
-	  			<li class="my-order"><a href="#">Мои заказы</a></li>
-	  			<li class="my-setting"><a href="#">Личный кабинет</a></li>
+	  			<li class="my-order"><a href="myorder.html">Мои заказы</a></li>
+	  			<li class="my-settings"><a href="mysettings">Личный кабинет</a></li>
 	  		</ul>
 	  	</div>
 
@@ -81,9 +82,9 @@
 			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед">
 			<a href="catalog.html">Каталог</a>
 			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед">
-			<a href="tools.html">Инструменты</a>
+			<a href="tools.html">Инструмент</a>
 			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед">
-			<a href="#">Инструменты</a>
+			<a href="#">Перфораторы</a>
 		</section>
 
   		<section class="catalog-title">  <!-- Как оформить дерево каталога, пока не знаю -->        <!--Пока не знаю как сетку ниже делать-->
@@ -94,26 +95,41 @@
   			<h2 class="visually-hidden">Фильтр:</h2>
 
   			<p>Фильтр</p>
+			<form action="https://htmlacademy.ru/echo" method="post" oninput="output-price-2.value=price.value">  <!-- Не могу понять почему не работает скрол -->
 
-  			<div class="brands">
-  				<b>Производители:</b>
-  				<form action="#" method="post">
-  					<input type="checkbox" name="bosch" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> BOSCH
-  					<input type="checkbox" name="interskol" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> ИНТЕРСКОЛ
-  					<input type="checkbox" name="makita" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> MAKITA
-  					<input type="checkbox" name="dewalt" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> DEWALT
-  					<input type="checkbox" name="hitachi" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> HITACHI
-  				</form>  				
-  			</div>
+	  			<div class="price">
+                	<label for="price">Цена:</label>
+                    0
+                    <input type="range" id="price" name="price" min="0" max="30000" step="1000">
+                    30000
+                </div>
 
-  			<div class="power">
-  				<b>Питание:</b>
-  				<form action="#" method="post">
-  					<input type="checkbox" name="battery" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> Аккумуляторные
-  					<input type="checkbox" name="electric" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> Сетевые
-  					<input type="submit" name="showme" id="" value="Показать" title="Показать выбранные">
-  				</form>  
-  			</div>
+                <div class="output-price">
+                    <output class="output-price-1" name="output-price-1">0</output>
+                    <output class="output-price-2" name="output-price-2">30000</output>
+                </div>
+
+	  			<div class="brands">
+	  				<label>Производители:
+	  					<input type="checkbox" name="bosch" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> BOSCH
+	  					<input type="checkbox" name="interskol" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> ИНТЕРСКОЛ
+	  					<input type="checkbox" name="makita" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> MAKITA
+	  					<input type="checkbox" name="dewalt" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> DEWALT
+	  					<input type="checkbox" name="hitachi" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> HITACHI
+	  				</label>				
+	  			</div>
+
+	  			<div class="power">
+	  				<label>Питание:
+	  					<input type="checkbox" name="battery" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> Аккумуляторные
+	  					<input type="checkbox" name="electric" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> Сетевые	  					
+	  				</label>
+	  			</div>
+	  			<div class="btn-show">
+		  			<label class="visually-hidden" id="show">Показать</label>
+		  			<input type="submit" name="show" id="show" value="Показать" title="Показать выбранные">
+	  			</div>
+	  		</form> 
   		</section>
 
   		<section>
@@ -121,27 +137,27 @@
 
   			<p>Сортировка</p>              <!-- Сортировка -->
 
-  			<form action="#" method="post">
+  			<form action="https://htmlacademy.ru/echo" method="post">
   				<div class="PTFsorting">
-	  				<label>
+	  				<label class="visually-hidden"> Сортировка по цене
 	  					<input type="radio" name="PTFsorting" value="price" checked> По цене
 	  				</label>
 
-	  				<label>
+	  				<label class="visually-hidden"> Сортировка по типу
 	  					<input type="radio" name="PTFsorting" value="type"> По типу
 	  				</label>
 
-	  				<label>
+	  				<label class="visually-hidden"> Сортировка по функционалу
 	  					<input type="radio" name="PTFsorting" value="function"> По функционалу
 	  				</label>
   				</div>
 
   				<div class="AZsorting">
-  					<label>
+  					<label class="visually-hidden"> Прямая сортировка
 	  					<input type="radio" name="AZsorting" value="A-Z" title="Сортировка «А-Я»"checked><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка «А-Я»">
 	  				</label>
 
-	  				<label>
+	  				<label class="visually-hidden"> Обратная сортировка
 	  					<input type="radio" name="AZsorting" value="Z-A" title="Сортировка «Я-А»"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка «Я-А»">
 	  				</label>
   				</div>
@@ -159,8 +175,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>15500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -171,8 +187,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>15500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -183,8 +199,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>25500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -195,8 +211,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>25500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -207,8 +223,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>12500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -219,8 +235,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>12500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -231,8 +247,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>15500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -243,8 +259,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>15500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -255,8 +271,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>25500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -267,8 +283,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>25500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -279,8 +295,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>12500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -291,8 +307,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>12500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -303,8 +319,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>15500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -315,8 +331,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>15500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -327,8 +343,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>25500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -339,8 +355,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>25500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -351,8 +367,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>12500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 
@@ -363,8 +379,8 @@
 					<img src="img/red-button.svg" width="141" height="38" alt="Цена">
 					<p>12500 Р.</p>
 					<div class="catalog-item-buttons">
-						<a href="#" class="btn-cart"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</a>
-						<a href="#" class="btn-bookmarks">В закладки</a>
+						<button class="btn-cart" type="button"><img src="img/icon-cart.svg" width="15" height="15" alt="Купить">Купить</button>
+						<button class="btn-bookmarks" type="button">В закладки</button>
 					</div>
 				</div>
 			</div>	        
@@ -463,9 +479,7 @@
 	  		<button type="button" class="btn-close">Продолжить покупки</button>               <!-- Кнопка закрывает форму --> 
   		</div>
 
-  		<button type="button" class="modal-close">X</button>                                <!-- Крест закрывает форму" -->
+  		<button type="button" class="modal-close">Закрыть</button>                                <!-- Крест закрывает форму" -->
   	</section>
-
-
   </body>
 </html>
