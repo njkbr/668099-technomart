@@ -14,11 +14,13 @@
 		  		</a>
 
 		  		<form action="https://htmlacademy.ru/echo" method="post">
-		  			<label class="visually-hidden">
+		  			<label class="visually-hidden" for="catalog-search">
 		  				Поиск по каталогу
-		  				<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-		  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:">
 		  			</label>
+
+	  				<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
+	  				<input type="submit" value="Поиск">
+	  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:">		  			
 		  		</form>
 		  	</div>
 
@@ -117,8 +119,8 @@
 		  			<div class="promo-slider-control">
 		  				<button class="btn-slider btn-slider-back" type="button"><img src="img/icon-left.svg" width="22" height="40" alt="Налево"></button>
 		  				<button class="btn-slider btn-slider-next" type="button"><img src="img/icon-right.svg" width="22" height="40" alt="Направо"></button>
-		  				<button class="btn-slider btn-slider-1"><img src="http://placehold.it/5x5"></button> <!-- на лекции сказали, что эти кнопки вроде стилизуются -->
-		  				<button class="btn-slider btn-slider-2"><img src="http://placehold.it/5x5"></button> <!-- на лекции сказали, что эти кнопки вроде стилизуются -->
+		  				<button class="btn-slider-toggle"><img src="http://placehold.it/5x5"></button>
+		  				<button class="btn-slider-toggle"><img src="http://placehold.it/5x5"></button>
 		  				<a href="catalog.html">Открыть каталог</a>
 	  				</div>
 		  		</div>  			
@@ -284,9 +286,9 @@
 			</p>
 			<div class="promo-services">
 				<div class="services-slider-control">
-	  				<button class="btn-slider-3" type="button">Доставка</button>
-	  				<button class="btn-slider-4" type="button">Гарантия</button>
-	  				<button class="btn-slider-5" type="button">Кредит</button>
+	  				<button class="btn-services" type="button">Доставка</button>
+	  				<button class="btn-services" type="button">Гарантия</button>
+	  				<button class="btn-services" type="button">Кредит</button>
 	  			</div>
 
 				<div class="services-slider">

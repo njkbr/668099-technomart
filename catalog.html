@@ -14,11 +14,13 @@
 		  		</a>
 
 		  		<form action="https://htmlacademy.ru/echo" method="post">
-		  			<label class="visually-hidden">
+		  			<label class="visually-hidden" for="catalog-search">
 		  				Поиск по каталогу
-		  				<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-		  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:">
 		  			</label>
+
+	  				<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
+	  				<input type="submit" value="Поиск">
+	  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:">		  			
 		  		</form>
 		  	</div>
 
@@ -75,19 +77,25 @@
   	</header>
 
   	<main class="container">
-  		<section class="catalog-tree">
-  			<h2 class="visually-hidden">Дерево каталога</h2>
+  		<ul class="breadcrumbs">
+  			<li>
+	  			<a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Домашняя"></a>
+				<!-- <img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед"> -->
+			</li>
+			<li>
+				<a href="catalog.html">Каталог</a>
+				<!-- <img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед"> -->
+			</li>
+			<li>
+				<a href="tools.html">Инструмент</a>
+				<!-- <img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед"> -->
+			</li>
+			<li class="breadcrumbs-current">
+				Перфораторы
+			</li>			
+		</ul>
 
-			<a href="#"><img src="img/icon-home.svg" width="14" height="12" alt="Домашняя"></a>
-			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед">
-			<a href="catalog.html">Каталог</a>
-			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед">
-			<a href="tools.html">Инструмент</a>
-			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперед">
-			<a href="#">Перфораторы</a>
-		</section>
-
-  		<section class="catalog-title">  <!-- Как оформить дерево каталога, пока не знаю -->        <!--Пока не знаю как сетку ниже делать-->
+  		<section class="catalog-title">        <!--Пока не знаю как сетку ниже делать-->
   			<h2>Перфораторы</h2>
   		</section>
 
@@ -95,71 +103,114 @@
   			<h2 class="visually-hidden">Фильтр:</h2>
 
   			<p>Фильтр</p>
-			<form action="https://htmlacademy.ru/echo" method="post" oninput="output-price-2.value=price.value">  <!-- Не могу понять почему не работает скрол -->
 
-	  			<div class="price">
-                	<label for="price">Цена:</label>
-                    0
-                    <input type="range" id="price" name="price" min="0" max="30000" step="1000">
-                    30000
-                </div>
 
-                <div class="output-price">
-                    <output class="output-price-1" name="output-price-1">0</output>
-                    <output class="output-price-2" name="output-price-2">30000</output>
-                </div>
+			<form action="https://htmlacademy.ru/echo" method="post">
+				<fieldset>
+					<legend>Цена:</legend>
+					<div class="range-price">
+						<div class="range-scale">
+							<div class="range-bar"></div>
+						</div>
+						<button type="button" class="range-toggle range-toggle-min">0</button>
+						<button type="button" class="range-toggle range-toggle-max">30000</button>
+					</div>
 
-	  			<div class="brands">
-	  				<label>Производители:
-	  					<input type="checkbox" name="bosch" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> BOSCH
-	  					<input type="checkbox" name="interskol" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> ИНТЕРСКОЛ
-	  					<input type="checkbox" name="makita" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> MAKITA
-	  					<input type="checkbox" name="dewalt" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> DEWALT
-	  					<input type="checkbox" name="hitachi" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> HITACHI
-	  				</label>				
-	  			</div>
+					<div class="output-price">
+						<label class="visually-hidden" for="price-min">Минимальная цена</label>
+						<input type="number" id="price-min" name="price-min" value="0" min="0" max="30000" step="1000">
 
-	  			<div class="power">
-	  				<label>Питание:
-	  					<input type="checkbox" name="battery" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> Аккумуляторные
-	  					<input type="checkbox" name="electric" id="" checked><img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> Сетевые	  					
-	  				</label>
-	  			</div>
+						<label class="visually-hidden" for="price-max">Максимальная цена</label>
+						<input type="number" id="price-max" name="price-max" value="30000" min="0" max="30000" step="1000">                    
+					</div>
+				</fieldset>
+					
+				<fieldset>
+					<legend>Производители:</legend>
+					<ul class="brands">
+						<li class="brands-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-chekbox" type="checkbox" name="bosch" id="bosch" checked> Bosch
+							</label>
+						</li>
+						<li class="brands-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-chekbox" type="checkbox" name="interskol" id="interskol" checked> Интерскол
+							</label>
+						</li>
+						<li class="brands-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-chekbox" type="checkbox" name="makita" id="makita" checked> Makita
+							</label>
+						</li>
+						<li class="brands-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-chekbox" type="checkbox" name="dewalt" id="dewalt" checked> Dewalt
+							</label>
+						</li>
+						<li class="brands-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-chekbox" type="checkbox" name="hitachi" id="hitachi" checked> Hitachi
+							</label>
+						</li class="brands-filter">
+					</ul>
+				</fieldset>
+
+				<fieldset>
+					<legend>Питание:</legend>
+					<ul class="power">
+						<li class="power-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-radio" type="radio" name="power-group" value="battery" id="battery" checked> Аккумуляторные
+							</label>
+						</li>
+						<li class="power-filter">
+							<label>
+								<input class="visually-hidden" class="filter-input" class="filter-input-radio" type="radio" name="power-group" value="electric" id="electric"> Сетевые
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+
 	  			<div class="btn-show">
-		  			<label class="visually-hidden" id="show">Показать</label>
 		  			<input type="submit" name="show" id="show" value="Показать" title="Показать выбранные">
 	  			</div>
 	  		</form> 
   		</section>
 
   		<section>
-  			<h2>Сортировка</h2>
+  			<h2 class="visually-hidden">Сортировка товаров</h2>
 
-  			<p>Сортировка</p>              <!-- Сортировка -->
+  			<p>Сортировка</p>
 
   			<form action="https://htmlacademy.ru/echo" method="post">
-  				<div class="PTFsorting">
-	  				<label class="visually-hidden"> Сортировка по цене
-	  					<input type="radio" name="PTFsorting" value="price" checked> По цене
-	  				</label>
+  				<div class="PTF-sorting">
+  					<a href="#">                                     <!-- На интенсиве привели пример этой сортировки и рекомендовали оформить в ссылки -->
+		  				<input type="radio" id="price-sort" name="PTFsorting" value="price" checked>
+		  				<label for="price-sort">По цене</label>
+	  				</a>
 
-	  				<label class="visually-hidden"> Сортировка по типу
-	  					<input type="radio" name="PTFsorting" value="type"> По типу
-	  				</label>
+	  				<a href="#">
+		  				<input type="radio" id="type-sort" name="PTFsorting" value="type">
+		  				<label for="type-sort">По типу</label>
+	  				</a>
 
-	  				<label class="visually-hidden"> Сортировка по функционалу
-	  					<input type="radio" name="PTFsorting" value="function"> По функционалу
-	  				</label>
+	  				<a href="#">
+		  				<input type="radio" id="function-sort" name="PTFsorting" value="function">
+		  				<label for="function-sort">По функционалу</label>
+	  				</a>
   				</div>
 
-  				<div class="AZsorting">
-  					<label class="visually-hidden"> Прямая сортировка
-	  					<input type="radio" name="AZsorting" value="A-Z" title="Сортировка «А-Я»"checked><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка «А-Я»">
-	  				</label>
+  				<div class="AZ-sorting">
+  					<a href="#">
+	  					<input type="radio" id="AZ-sort" name="AZ-sorting" value="A-Z" title="Сортировка «А-Я»"checked>
+		  				<label class="visually-hidden" for="AZ-sort">Прямая сортировка</label>
+	  				</a>
 
-	  				<label class="visually-hidden"> Обратная сортировка
-	  					<input type="radio" name="AZsorting" value="Z-A" title="Сортировка «Я-А»"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка «Я-А»">
-	  				</label>
+	  				<a href="#">
+		  				<input type="radio" id="ZA-sort" name="AZ-sorting" value="Z-A" title="Сортировка «Я-А»">
+		  				<label class="visually-hidden" for="ZA-sort">Обратная сортировка</label>
+	  				</a>
   				</div>
   			</form>
   		</section>
@@ -398,9 +449,7 @@
   			<h2>
   				Пара слов о перфораторах
   			</h2>
-  			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-  				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br>
-  				ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+  			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В	ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
   		</section>
   	</main>
 
