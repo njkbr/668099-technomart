@@ -1,0 +1,239 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Cuprum", "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #000000;
+
+	background-color: #cdd482;   /*Временно основной цвет*/ 
+}
+
+a {
+	text-decoration: none;
+}
+
+.top-left-header a,
+.top-right-header a,
+.user-nav a,
+.site-nav a,
+.catalog-nav-top a,
+.promo-slider-control a,
+.btn-catalog-nav,
+.btn-popular-items,
+.btn-popular-brands,
+.catalog-brands a,
+.btn-loan-app,
+.btn-company-about,
+.btn-contacts,
+.footer-site-nav-1 a,
+.footer-site-nav-2 a,
+.footer-bottom-feedback a,
+.footer-bottom-creator a {
+	color: #ffffff;          /*Для всех ссылок белый цвет*/
+}
+
+.user-nav,
+.site-nav,
+.catalog-nav-top ul,
+.catalog-nav-right ul,
+.catalog-brands,
+.company-information ul,
+.footer-site-nav-1,
+.footer-site-nav-2,
+.footer-bottom-social {
+	list-style: none;            /*Убрал маркеры*/
+}
+
+.main-header {
+	background-color: #f4f7f9;
+}
+
+.top-header {
+	font-size: 17px;
+	line-height: 18px;
+
+	background-color: #293449;
+}
+
+h1 {
+	font-size: 16px;
+	font-style: italic;
+	line-height: 23px;
+	color: #ee3643;
+}
+
+.phone {
+	font-size: 21px;
+	line-height: 21px;
+	color: #ee3643;
+
+	border: 3px solid #ffffff;
+	padding: 9px 49px;
+}
+
+.address {
+	font-size: 14px;
+	line-height: 24px;
+	color: #32455c;
+}
+
+.user-nav a {
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;
+}
+
+.login-link,
+.reg-link {      /*  Как впоследствии стилизовать кнопки? здесь или ниже отдельным блоком? */
+
+}
+
+.main-nav {
+	font-size: 17px;
+	line-height: 27px;
+
+	background-color: #32425c; /*Ограничить по ширине 940пикс и добавить тень*/
+}
+.catalog-nav-top h3,
+.catalog-nav-right h3 {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #ffffff;
+}
+.btn-catalog-nav,        /*Не знаю правильно ли здесь собирать схожие по стилю элементы?*/
+.promo-slider-control a,
+.btn-popular-items,
+.btn-popular-brands,
+.btn-company-about,
+.btn-contacts {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.promo-slider-drill h3,
+.promo-slider-perforator h3 {
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.promo-slider-drill p,
+.promo-slider-perforator p {
+	font-size: 18px;
+	line-height: 24px;
+	color: #ffffff;
+}
+
+.popular-items h2,              /*Почему-то по умолчанию шрифт жирный*/
+.popular-brands h2,
+.services h2,
+.company-information h3,
+.company-contacts h3 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #32425c;
+}
+
+.popular-items-wrapper,
+.popular-brands-wrapper, {
+	background-color: #f9f5f0;  /*Фон не определяется*//*Ограничить по ширине 940пикс */
+}
+
+.popular-items-catalog {
+	font-family: "PT Sans";
+	font-weight: bold;
+}
+
+.popular-items-catalog h3 {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.hidden-price {
+	font-size: 17px;
+	line-height: 18px;
+	text-decoration: line-through;
+	text-transform: uppercase;
+}
+
+.popular-items-catalog p {
+	font-size: 17px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.services {
+	background-color: #f4f8f9;
+}
+
+.services p,
+.company-information p,
+.company-contacts p {
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.services-slider-item h3 {
+	font-size: 21px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.footer-top {
+	font-size: 18px;
+	line-height: 24px;
+
+	background-color: #32425c;
+}
+
+.footer-site-nav-1 {
+	
+}
+
+.footer-contacts {
+	color: #ffffff;
+}
+
+.footer-site-nav-2 a {
+	color: #ffd180;
+}
+
+.footer-bottom {
+	font-size: 16px;
+	line-height: 18px;
+
+	background-color: #293449;
+}
+
+.footer-bottom-copyright,
+.footer-bottom-feedback,
+.footer-bottom-creator {
+	color: #ffffff;
+}
+
+.footer-bottom-feedback a,
+.footer-bottom-creator a {
+	color: #ffd180;
+}
+
+.modal-write {
+	font-size: 18px;
+	line-height: 18px;
+}
+              /*Не знаю как применить стили для плейсхолдеров*/
+
+.modal-write-send {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}

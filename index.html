@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>"Техномарт" - магазин стройматериалов</title>
-    <link rel="stylesheet" href="">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
   	<header class="main-header">
@@ -46,7 +48,7 @@
 	  			<span class="phone">
 	  				<img src="img/icon-phone.svg" width="19" height="19" alt="Телефон">+7 (812) 555-05-55
 	  			</span>
-	  			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+	  			<p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 	  		</div>
 
 	  		<ul class="user-nav">
@@ -391,8 +393,8 @@
 		        </ul>
    			</nav>
   		</div>
-  		<div class="footer-bottom">
 
+  		<div class="footer-bottom">
   			<p class="footer-bottom-copyright">
   				© 2010–2017 Компания «Техномарт»<br>
   				Все права защищены
@@ -401,17 +403,17 @@
   			<ul class="footer-bottom-social">
   				<li>
 		        	<a class="btn-social" href="#">
-		        		<img src="img/icon-vk.svg" width="26" height="15" alt="Наша страничка ВКонтакте">VK <!--пока так, чтоб не потерять -->
+		        		<img src="img/icon-vk.svg" width="26" height="15" alt="Наша страничка ВКонтакте">
 		        	</a>
 		        </li>
 		        <li>
 		        	<a class="btn-social" href="#">
-		        		<img src="img/icon-fb.svg" width="12" height="22" alt="Наша группа в Фейсбуке">FB <!--пока так, чтоб не потерять -->
+		        		<img src="img/icon-fb.svg" width="12" height="22" alt="Наша группа в Фейсбуке">
 		        	</a>
 		        </li>
 		        <li>
 		        	<a class="btn-social" href="#">
-		        		<img src="img/icon-insta.svg" width="21" height="21" alt="Наши фото в Инстаграмме">INSTA <!-- --пока так, чтоб не потерять -->
+		        		<img src="img/icon-insta.svg" width="21" height="21" alt="Наши фото в Инстаграмме">
 		        	</a>
 	        	</li>
         	</ul>
@@ -447,7 +449,7 @@
   				Текст письма:<br>
   				<textarea name="comment" rows="3" placeholder="В свободной форме"></textarea>
   			</label>
-  			<input type="submit" value="Отправить">
+  			<input class="modal-write-send" type="submit" value="Отправить">
   		</form>
 
   		<button type="button" class="modal-close">Закрыть</button>
