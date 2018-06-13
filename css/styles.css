@@ -51,6 +51,10 @@ a {
 	background-color: #f4f7f9;
 }
 
+.btn-order {
+	background-color: #63a63e;
+}
+
 .top-header {
 	font-size: 17px;
 	line-height: 18px;
@@ -80,7 +84,8 @@ h1 {
 	color: #32455c;
 }
 
-.user-nav a {
+.login-link a,
+.reg-link a {
 	font-size: 21px;
 	line-height: 21px;
 	color: #000000;
@@ -97,6 +102,9 @@ h1 {
 
 	background-color: #32425c; /*Ограничить по ширине 940пикс и добавить тень*/
 }
+
+                      /*Не знаю как сделать стиль для инпута-поиска*/
+
 .catalog-nav-top h3,
 .catalog-nav-right h3 {
 	font-size: 24px;
@@ -104,6 +112,45 @@ h1 {
 	line-height: 30px;
 	color: #ffffff;
 }
+
+.bookmarks:hover,
+.cart:hover {
+	background-color: #212a3a;
+}
+
+.bookmarks:focus,
+.cart:focus {
+	color: rgba(255, 255, 255, 0.6);
+	background-color: #161d29;
+}
+
+.btn-order:hover {
+	background-color: #5fbb2d;
+}
+
+.btn-order:focus {
+	background-color: #518534;
+}
+
+.login-link a:hover,
+.reg-link a:hover {
+	color: #ee3643;
+}
+
+.login-link a:focus,
+.reg-link a:focus {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav a:hover {
+	background-color: #293449;
+}
+
+.main-nav a:focus {
+	color: rgba(255, 255, 255, 0.5);
+	background-color: #1d2739;
+}
+
 .btn-catalog-nav,        /*Не знаю правильно ли здесь собирать схожие по стилю элементы?*/
 .promo-slider-control a,
 .btn-popular-items,
@@ -113,6 +160,34 @@ h1 {
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
+}
+
+.btn-catalog-nav {
+	background-color: #e5e5e5;
+}
+
+.promo-slider-control a,
+.btn-popular-items,
+.btn-popular-brands,
+.btn-company-about,
+.btn-contacts {
+	background-color: #ee3643;
+}
+
+.btn-catalog-nav:hover {
+	background-color: #cccccc;
+}
+
+.btn-catalog-nav:focus {
+	background-color: #b2b2b2;
+}
+
+.promo-slider-control a:hover {
+	background-color: #ca2c37;
+}
+
+.promo-slider-control a:focus {
+	background-color: #ba2732;
 }
 
 .promo-slider-drill h3,
@@ -143,8 +218,8 @@ h1 {
 }
 
 .popular-items-wrapper,
-.popular-brands-wrapper, {
-	background-color: #f9f5f0;  /*Фон не определяется*//*Ограничить по ширине 940пикс */
+.popular-brands-wrapper {
+	background-color: #f9f5f0;  /*Фон не переопределяется*//*Ограничить по ширине 940пикс */
 }
 
 .popular-items-catalog {
@@ -170,6 +245,18 @@ h1 {
 	text-transform: uppercase;
 }
 
+.popular-item {
+	border: 1px solid #eaeaea;
+}
+
+.popular-item:hover {
+	box-shadow: 0 0 2px 7px lightgrey; /*не знаю как менять картинку на кнопки*/
+}
+
+.catalog-brands li:hover {
+	box-shadow: 0 0 2px 7px lightgrey;
+}
+
 .services {
 	background-color: #f4f8f9;
 }
@@ -182,11 +269,29 @@ h1 {
 	line-height: 24px;
 }
 
-.services-slider-item h3 {
+.btn-services {
 	font-size: 21px;
 	line-height: 30px;
-	font-weight: bold;
 	color: #ffffff;
+
+	background-color: #32425c;
+}
+
+.services-slider-item h3 {
+	font-size: 36px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #32425c;
+}
+
+.btn-services:hover {
+	background-color: #293449;
+}
+
+.btn-services:focus {
+	color: #32425c;
+
+	background-color: #ffffff;
 }
 
 .footer-top {
@@ -196,7 +301,7 @@ h1 {
 	background-color: #32425c;
 }
 
-.footer-site-nav-1 {
+.footer-site-nav-1 a {
 	
 }
 
@@ -226,6 +331,27 @@ h1 {
 	color: #ffd180;
 }
 
+.footer-site-nav-1 a:hover,
+.footer-site-nav-2 a:hover,
+.footer-bottom-feedback a:hover,
+.footer-bottom-creator a:hover {
+	text-decoration: underline;
+}
+
+.footer-site-nav-1 a:focus {
+	color: rgba(241, 245, 247, 0.5);
+}
+
+.footer-site-nav-2 a:focus {
+	color: rgba(255, 209, 128, 0.5);
+}
+
+.footer-bottom-feedback a:focus,
+.footer-bottom-creator a:focus {
+ 	color: #ee3643;
+ 	text-decoration: none;
+ }
+
 .modal-write {
 	font-size: 18px;
 	line-height: 18px;
@@ -237,3 +363,121 @@ h1 {
 	line-height: 18px;
 	text-transform: uppercase;
 }
+
+.modal-write:hover {
+	/*Не знаю как стили для участков форм применять*/
+}
+
+/*Стили страницы каталога*/
+
+.order-link a,
+.setting-link a {
+	font-size: 16px;
+	line-height: 18px;
+	color: #32425c;
+	text-decoration: underline;
+}
+
+.order-link a:hover,
+.setting-link a:hover {
+	color: #ee3643;
+}
+
+.order-link a:focus,
+.setting-link a:focus {
+	color: rgba(50, 66, 92, 0.3);
+}
+
+.breadcrumbs {
+	list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 18px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.filter p,
+.sorting p {
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 18px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.filter-type {
+	font-family: "PT Sans";
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.brands-filter label,
+.power-filter label {
+	font-family: "PT Sans";
+	font-size: 15px;
+	line-height: 20px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.btn-show {
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase; /*нет воздействия на тайтл*/
+}
+
+.PTF-sorting a {
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 18px;
+	color: rgba(0, 0, 0, 0.3);
+	text-decoration: underline dotted red;
+	text-transform: uppercase;
+}
+
+.PTF-sorting a:hover {
+	color: rgba(0, 0, 0);
+	text-decoration: underline solid red;
+}
+
+.PTF-sorting a:active {        /*Почему-то активность не фиксируется*/
+	color: rgba(238, 54, 67);
+	text-decoration: none;
+}
+
+.btn-page {
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 18px;
+	color: #000000;
+	text-transform: uppercase;
+	border: 1px solid #000000;
+	padding: 13px 18px;
+}
+
+.btn-page-active {           /*размытие у кнопки по краям и размер не меняется*/
+	color: #ffffff;
+	border: none;
+	background-color: #ee3643;
+}
+
+.btn-page:hover, {
+	                /*Не нашел параметры различия рамки в фотошопе*/
+}
+
+.btn-page:focus, {
+	box-shadow: 2px 2px 0 0 #ee3643;      /*    прозрачность кнопки убрать */
+}
+
+
+
+/*Как каталог стилизовать, пока не знаю... Но я научусь;)*/
