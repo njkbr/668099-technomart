@@ -11,8 +11,13 @@ body {
 	background-color: #cdd482;   /*Временно основной цвет */
 }
 
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
 
 a {
 	text-decoration: none;
@@ -212,6 +217,98 @@ h1 {
 	background-color: #b2b2b2;
 }
 
+.main-header {
+	min-height: 260px;
+}
+
+.header-logo {
+	width: 220px;
+	height: 47px;
+}
+
+.top-left-header {
+	margin: 0px;
+	padding: 0px;
+}
+
+.top-right-header {
+	margin: 0px;
+	padding: 0px;
+}
+
+.top-header {
+	display: flex;
+}
+
+.top-left-header {
+	display: flex;
+}
+
+.middle-header {
+	display: flex;
+}
+
+.site-nav {
+	display: flex;
+}
+
+.catalog-nav-top ul {
+	display: flex;
+}
+
+.popular-items-catalog {
+	display: flex;
+}
+
+.catalog-brands {
+	display: flex;
+}
+
+.promo-services {
+	display: flex;
+}
+
+.footer-wrapper-1 {
+	display: flex;
+}
+
+.footer-wrapper-2 {
+	display: flex;
+}
+
+.footer-top-nav-1 ul {
+	display: flex;
+}
+
+.footer-top-nav-2 ul {
+	display: flex;
+}
+
+.footer-bottom {
+	display: flex;
+}
+
+.popular-item-new,
+.catalog-item-new {
+	display: none;
+}
+
+.footer-bottom-social {
+	display: flex;
+}
+
+.breadcrumbs {
+	display: flex;
+}
+
+.catalog-filter {
+	display: flex;
+}
+
+.main-catalog-items {
+	display: flex;
+}
+
 .promo-slider-control a:hover
 .btn-popular-items:hover,
 .btn-popular-brands:hover,
@@ -267,6 +364,7 @@ h1 {
 	font-family: "PT Sans";
 	font-weight: bold;
 	text-align: center;
+	border: 1px solid #e5e5e5;
 }
 
 .popular-item h3,
@@ -350,10 +448,20 @@ h1 {
 
 .popular-item:hover,
 .catalog-item:hover {
+	border: none;
 	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5); /*не знаю как менять картинку на кнопки*/
 }
 
+.catalog-brands {
+	text-align: center;
+}
+
+.catalog-brands li {
+	border: 1px solid #e5e5e5;
+}
+
 .catalog-brands li:hover {
+	border: none;
 	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5);
 }
 
@@ -547,6 +655,20 @@ h1 {
 	text-transform: uppercase;
 }
 
+.filter ul {
+	list-style: none;
+}
+
+.filter fieldset{
+	border: none;
+}
+
+.brands-filter:disabled,
+.power-filter:disabled {
+
+	opacity: 0.4;           /*Почему-то лейблы недизаблятся*/
+}
+
 .filter-type {
 	font-family: "PT Sans";
 	font-size: 17px;
@@ -603,12 +725,6 @@ h1 {
 	/*box-shadow: ;*/
 }
 
-.btn-page-active {
-	color: #ffffff;
-	border: 1px solid #ee3643;
-	background-color: #ee3643;
-}
-
 .btn-page:hover {
 	border: 1px solid #bdc6ca;
 }
@@ -617,6 +733,17 @@ h1 {
 	border: 1px solid #ee3643;
 }
 
+.btn-page-active {
+	color: #ffffff;
+	border: 1px solid #ee3643;
+	background-color: #ee3643;
+}
+
+.btn-page-active:hover,
+.btn-page-active:focus {
+	color: #ffffff;
+	border: 1px solid #ee3643;
+	background-color: #ee3643;
+}
 
 
-/*Как каталог стилизовать, пока не знаю... Но я научусь;)*/
