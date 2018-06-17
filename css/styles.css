@@ -8,11 +8,20 @@ body {
 	font-weight: normal;
 	color: #000000;
 
-	background-color: #cdd482;   /*Временно основной цвет*/ 
+	background-color: #cdd482;   /*Временно основной цвет */
 }
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
 a {
 	text-decoration: none;
+}
+
+input:focus,
+button:focus,
+textarea:focus {
+	outline: none;
 }
 
 .top-left-header a,
@@ -24,6 +33,7 @@ a {
 .btn-catalog-nav,
 .btn-popular-items,
 .btn-popular-brands,
+.popular-item a,
 .catalog-brands a,
 .btn-loan-app,
 .btn-company-about,
@@ -31,8 +41,10 @@ a {
 .footer-site-nav-1 a,
 .footer-site-nav-2 a,
 .footer-bottom-feedback a,
-.footer-bottom-creator a {
-	color: #ffffff;          /*Для всех ссылок белый цвет*/
+.footer-bottom-creator a,
+.catalog-item a,
+.btn-order-modal {
+	color: #ffffff;
 }
 
 .user-nav,
@@ -44,15 +56,11 @@ a {
 .footer-site-nav-1,
 .footer-site-nav-2,
 .footer-bottom-social {
-	list-style: none;            /*Убрал маркеры*/
+	list-style: none;
 }
 
 .main-header {
 	background-color: #f4f7f9;
-}
-
-.btn-order {
-	background-color: #63a63e;
 }
 
 .top-header {
@@ -60,6 +68,25 @@ a {
 	line-height: 18px;
 
 	background-color: #293449;
+}
+
+.top-header input[type="text"] {
+	color: #ffffff;                  /* Цвет плейсхолдера не меняется*/
+	background-color: #293449;
+	border: none;
+}
+
+.top-header input[type="text"]:hover {
+	background-color: #212a3a;
+}
+
+.top-header input[type="text"]:focus {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.btn-order {
+	background-color: #63a63e;
 }
 
 h1 {
@@ -129,6 +156,7 @@ h1 {
 }
 
 .btn-order:focus {
+	color: rgba(255, 255, 255, 0.5);
 	background-color: #518534;
 }
 
@@ -156,7 +184,8 @@ h1 {
 .btn-popular-items,
 .btn-popular-brands,
 .btn-company-about,
-.btn-contacts {
+.btn-contacts,
+.btn-order-modal {
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -170,7 +199,8 @@ h1 {
 .btn-popular-items,
 .btn-popular-brands,
 .btn-company-about,
-.btn-contacts {
+.btn-contacts,
+.btn-order-modal {
 	background-color: #ee3643;
 }
 
@@ -182,11 +212,21 @@ h1 {
 	background-color: #b2b2b2;
 }
 
-.promo-slider-control a:hover {
+.promo-slider-control a:hover
+.btn-popular-items:hover,
+.btn-popular-brands:hover,
+.btn-company-about:hover,
+.btn-contacts:hover,
+.btn-order-modal:hover {
 	background-color: #ca2c37;
 }
 
-.promo-slider-control a:focus {
+.promo-slider-control a:focus
+.btn-popular-items:focus,
+.btn-popular-brands:focus,
+.btn-company-about:focus,
+.btn-contacts:focus,
+.btn-order-modal:focus {
 	background-color: #ba2732;
 }
 
@@ -219,42 +259,102 @@ h1 {
 
 .popular-items-wrapper,
 .popular-brands-wrapper {
-	background-color: #f9f5f0;  /*Фон не переопределяется*//*Ограничить по ширине 940пикс */
+	background-color: #f9f5f0;  /*Ограничить по ширине 940пикс */
 }
 
-.popular-items-catalog {
+.popular-item,
+.catalog-item {
 	font-family: "PT Sans";
 	font-weight: bold;
+	text-align: center;
 }
 
-.popular-items-catalog h3 {
+.popular-item h3,
+.catalog-item h3 {
 	font-size: 18px;
 	line-height: 20px;
+	color: #000000;
 }
 
-.hidden-price {
+.popular-item p,
+.catalog-item p {
 	font-size: 17px;
 	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.hidden-item-price {
 	text-decoration: line-through;
-	text-transform: uppercase;
 }
 
-.popular-items-catalog p {
-	font-size: 17px;
+.item-price {
+	/*display: block;*/
+	width: 122px;
+	height: 38px;
+	margin: auto;
+	/*text-align: center;*/
+	background-color: #ee3643;    /*Не получается отцентрировать по высоте*/
+}
+
+.item-price::after {          /*    Не знаю как добавить стрелку-треугольник*/
+	content: "";
+}
+
+.btn-cart,
+.btn-bookmarks {
+	font-family: "Cuprum";
+	font-weight: normal;
+	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
+	border-radius: 2px;
+	border: none;  /*Не знаю как стили обнулить (3Д-эффект)*/
 }
 
+.btn-cart {
+	width: 135px;
+	height: 38px;
+	color: #ffffff;
+	background-color: #63a63e;
+	box-shadow: inset 0 -3px rgba(54, 115, 21);
+}
+
+.btn-bookmarks {
+	width: 135px;
+	height: 38px;
+	color: #32425c;
+	background-color: #ffffff;
+	box-shadow: inset 0 0 0 3px rgba(99, 166, 62);
+}
+
+.btn-cart:hover {
+	background-color: #5fbb2d;
+}
+
+.btn-bookmarks:hover {
+	box-shadow: inset 0 0 0 3px rgba(50, 66, 92);
+}
+
+.btn-cart:focus {
+	background-color: #518534; /*При клике появляется бордер почему-то*/
+}
+
+.btn-bookmarks:focus {
+	color: rgba(50, 66, 92, 0.3);
+	box-shadow: inset 0 0 0 3px rgba(50, 66, 92, 0.3);  /*При клике появляется бордер почему-то*/
+}
+}
 .popular-item {
 	border: 1px solid #eaeaea;
 }
 
-.popular-item:hover {
-	box-shadow: 0 0 2px 7px lightgrey; /*не знаю как менять картинку на кнопки*/
+.popular-item:hover,
+.catalog-item:hover {
+	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5); /*не знаю как менять картинку на кнопки*/
 }
 
 .catalog-brands li:hover {
-	box-shadow: 0 0 2px 7px lightgrey;
+	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5);
 }
 
 .services {
@@ -340,10 +440,12 @@ h1 {
 
 .footer-site-nav-1 a:focus {
 	color: rgba(241, 245, 247, 0.5);
+	text-decoration: none
 }
 
 .footer-site-nav-2 a:focus {
 	color: rgba(255, 209, 128, 0.5);
+	text-decoration: none
 }
 
 .footer-bottom-feedback a:focus,
@@ -352,21 +454,56 @@ h1 {
  	text-decoration: none;
  }
 
+ .footer-bottom-social {
+ 	text-align: center;
+ }
+
 .modal-write {
 	font-size: 18px;
 	line-height: 18px;
 }
-              /*Не знаю как применить стили для плейсхолдеров*/
 
-.modal-write-send {
+.modal-write input[type="text"],
+.modal-write input[type="email"],
+.modal-write textarea {
+	font-family: "PT sans";
+	font-size: 13px;
+	line-height: 18px;
+	border: 1px solid #d7dcde;
+	border-radius: 2px;
+}
+
+.modal-write input[type="text"]:hover,
+.modal-write input[type="email"]:hover,
+.modal-write textarea:hover {
+	border: 1px solid #b5b5b5;
+}
+
+.modal-write input[type="text"]:focus,
+.modal-write input[type="email"]:focus,
+.modal-write textarea:focus {
+	border: 1px solid #ee3643;
+}
+
+.modal-write input[type="submit"] {
+	width: 460px;
+	height: 38px;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
+	color: #ffffff;
+	border: none;
+	background-color: #ee3643;
 }
 
-.modal-write:hover {
-	/*Не знаю как стили для участков форм применять*/
+.modal-write input[type="submit"]:hover {
+	background-color: #ca2c37;
 }
+
+.modal-write input[type="submit"]:focus {
+	background-color: #ba2732;
+}
+
 
 /*Стили страницы каталога*/
 
@@ -435,7 +572,7 @@ h1 {
 	text-transform: uppercase; /*нет воздействия на тайтл*/
 }
 
-.PTF-sorting a {
+.PTF-sorting {
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 18px;
@@ -444,12 +581,12 @@ h1 {
 	text-transform: uppercase;
 }
 
-.PTF-sorting a:hover {
+.PTF-sorting:hover {
 	color: rgba(0, 0, 0);
 	text-decoration: underline solid red;
 }
 
-.PTF-sorting a:active {        /*Почему-то активность не фиксируется*/
+.PTF-sorting:active {        /*Почему-то активность не фиксируется*/
 	color: rgba(238, 54, 67);
 	text-decoration: none;
 }
@@ -460,22 +597,24 @@ h1 {
 	line-height: 18px;
 	color: #000000;
 	text-transform: uppercase;
-	border: 1px solid #000000;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
 	padding: 13px 18px;
+	/*box-shadow: ;*/
 }
 
-.btn-page-active {           /*размытие у кнопки по краям и размер не меняется*/
+.btn-page-active {
 	color: #ffffff;
-	border: none;
+	border: 1px solid #ee3643;
 	background-color: #ee3643;
 }
 
-.btn-page:hover, {
-	                /*Не нашел параметры различия рамки в фотошопе*/
+.btn-page:hover {
+	border: 1px solid #bdc6ca;
 }
 
-.btn-page:focus, {
-	box-shadow: 2px 2px 0 0 #ee3643;      /*    прозрачность кнопки убрать */
+.btn-page:focus {
+	border: 1px solid #ee3643;
 }
 
 
