@@ -448,7 +448,7 @@ h1 {
 
 .popular-item:hover,
 .catalog-item:hover {
-	border: none;
+	border: transparent;
 	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5); /*не знаю как менять картинку на кнопки*/
 }
 
@@ -631,6 +631,24 @@ h1 {
 .order-link a:focus,
 .setting-link a:focus {
 	color: rgba(50, 66, 92, 0.3);
+}
+
+.user-logout {
+	background-color: #ffffff;
+}
+
+.user-logout span {
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;	
+}
+
+.user-logout span:hover {
+	
+}
+
+.user-logout span:focus {
+	color: rgba(0, 0, 0, 0.3);  /*не работает*/
 }
 
 .breadcrumbs {
