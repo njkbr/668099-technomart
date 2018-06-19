@@ -21,6 +21,7 @@ html {
 
 a {
 	text-decoration: none;
+	color: #ffffff;
 }
 
 input:focus,
@@ -29,39 +30,28 @@ textarea:focus {
 	outline: none;
 }
 
-.top-left-header a,
-.top-right-header a,
-.user-nav a,
-.site-nav a,
-.catalog-nav-top a,
-.promo-slider-control a,
-.btn-catalog-nav,
-.btn-popular-items,
-.btn-popular-brands,
-.popular-item a,
-.catalog-brands a,
-.btn-loan-app,
-.btn-company-about,
-.btn-contacts,
-.footer-site-nav-1 a,
-.footer-site-nav-2 a,
-.footer-bottom-feedback a,
-.footer-bottom-creator a,
-.catalog-item a,
-.btn-order-modal {
-	color: #ffffff;
+.user-nav {
+	list-style: none;
 }
 
-.user-nav,
-.site-nav,
-.catalog-nav-top ul,
-.catalog-nav-right ul,
-.catalog-brands,
-.company-information ul,
-.footer-site-nav-1,
-.footer-site-nav-2,
-.footer-bottom-social {
+.catalog-nav-right ul {
 	list-style: none;
+}
+
+/*.visually-hidden { */
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px;
+  width: 1px; 
+  margin: -1px;
+  padding: 0;
+  border: 0; 
+}
+
+.block-inner {
+  width: 940px;
+  margin: 0px auto;
 }
 
 .main-header {
@@ -75,17 +65,44 @@ textarea:focus {
 	background-color: #293449;
 }
 
-.top-header input[type="text"] {
-	color: #ffffff;                  /* Цвет плейсхолдера не меняется*/
-	background-color: #293449;
-	border: none;
+.main-search{
+  display: flex;
 }
 
-.top-header input[type="text"]:hover {
+.main-search-input {
+	background-color: #293449;
+	border: none;
+	order: 2;
+}
+
+.main-search-button{
+  font-size: 0;
+  background-color: #293449;
+  border: none;
+  order: 1;
+}
+
+.main-search-input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.main-search-input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.main-search-input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.main-search-input:-moz-placeholder {
+  color: #ffffff;
+}
+
+.main-search-input:hover {
 	background-color: #212a3a;
 }
 
-.top-header input[type="text"]:focus {
+.main-search-input:focus {
 	color: #000000;
 	background-color: #ffffff;
 }
@@ -185,29 +202,20 @@ h1 {
 	background-color: #1d2739;
 }
 
-.btn-catalog-nav,        /*Не знаю правильно ли здесь собирать схожие по стилю элементы?*/
-.promo-slider-control a,
-.btn-popular-items,
-.btn-popular-brands,
-.btn-company-about,
-.btn-contacts,
-.btn-order-modal {
+        /*Не знаю правильно ли здесь собирать схожие по стилю элементы?*/
+.red-button {
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
+	background-color: #ee3643;
 }
 
 .btn-catalog-nav {
-	background-color: #e5e5e5;
-}
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
 
-.promo-slider-control a,
-.btn-popular-items,
-.btn-popular-brands,
-.btn-company-about,
-.btn-contacts,
-.btn-order-modal {
-	background-color: #ee3643;
+	background-color: #e5e5e5;
 }
 
 .btn-catalog-nav:hover {
@@ -251,10 +259,12 @@ h1 {
 
 .site-nav {
 	display: flex;
+	list-style: none;
 }
 
 .catalog-nav-top ul {
 	display: flex;
+	list-style: none;
 }
 
 .popular-items-catalog {
@@ -263,6 +273,8 @@ h1 {
 
 .catalog-brands {
 	display: flex;
+	list-style: none;
+	text-align: center;
 }
 
 .promo-services {
@@ -294,10 +306,6 @@ h1 {
 	display: none;
 }
 
-.footer-bottom-social {
-	display: flex;
-}
-
 .breadcrumbs {
 	display: flex;
 }
@@ -310,21 +318,11 @@ h1 {
 	display: flex;
 }
 
-.promo-slider-control a:hover
-.btn-popular-items:hover,
-.btn-popular-brands:hover,
-.btn-company-about:hover,
-.btn-contacts:hover,
-.btn-order-modal:hover {
+.red-button:hover {
 	background-color: #ca2c37;
 }
 
-.promo-slider-control a:focus
-.btn-popular-items:focus,
-.btn-popular-brands:focus,
-.btn-company-about:focus,
-.btn-contacts:focus,
-.btn-order-modal:focus {
+.red-button:focus {
 	background-color: #ba2732;
 }
 
@@ -344,11 +342,7 @@ h1 {
 	color: #ffffff;
 }
 
-.popular-items h2,
-.popular-brands h2,
-.services h2,
-.company-information h3,
-.company-contacts h3 {
+.blue-heading {
 	font-size: 30px;
 	font-weight: normal;
 	line-height: 30px;
@@ -385,17 +379,18 @@ h1 {
 
 .hidden-item-price {
 	text-decoration: line-through;
+
 }
 
 .item-price {
 	/*display: block;*/
-	width: 122px;
-	height: 38px;
-	line-height: 38px;
-	margin: auto;
+	/*width: 122px;*/
+	/*height: 38px;*/
+	/*line-height: 38px;*/
+	/*margin: auto;*/
 	/*text-align: center;*/
-	/*background-color: red;*/
-	background-image: url(img/red-button.svg);    /*Не получается отцентрировать по высоте*/
+/*	background-color: red;*/
+	background-image: url(img/red-button.png);    /*Не получается отцентрировать по высоте*/
 }
 
 .btn-cart,
@@ -452,10 +447,6 @@ h1 {
 	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5); /*не знаю как менять картинку на кнопки*/
 }
 
-.catalog-brands {
-	text-align: center;
-}
-
 .catalog-brands li {
 	border: 1px solid #e5e5e5;
 }
@@ -502,6 +493,10 @@ h1 {
 	background-color: #ffffff;
 }
 
+.company-information ul {
+	list-style: none;
+}
+
 .footer-top {
 	font-size: 18px;
 	line-height: 24px;
@@ -509,12 +504,16 @@ h1 {
 	background-color: #32425c;
 }
 
-.footer-site-nav-1 a {
-	
+.footer-site-nav-1 {
+	list-style: none;
 }
 
 .footer-contacts {
 	color: #ffffff;
+}
+
+.footer-site-nav-2 {
+	list-style: none;
 }
 
 .footer-site-nav-2 a {
@@ -560,11 +559,13 @@ h1 {
 .footer-bottom-creator a:focus {
  	color: #ee3643;
  	text-decoration: none;
- }
+}
 
  .footer-bottom-social {
+	display: flex;
+	list-style: none;
  	text-align: center;
- }
+}
 
 .modal-write {
 	font-size: 18px;
@@ -699,17 +700,15 @@ h1 {
 	text-transform: uppercase;
 }
 
-.brands-filter:disabled + label,
-.power-filter:disabled + label {
-
-	opacity: 0.4;           /*Почему-то лейблы недизаблятся*/
+.filter-input:disabled + label {
+	opacity: 0.4;
 }
 
-.btn-show {
+.btn-show input[type="submit"] {
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 18px;
-	text-transform: uppercase; /*нет воздействия на тайтл*/
+	text-transform: uppercase;
 }
 
 .PTF-sorting {

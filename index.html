@@ -9,20 +9,25 @@
   </head>
   <body>
   	<header class="main-header">
-  		<div class="top-header">   <!-- Не лишняя ли это обертка? -->
+  		<div class="top-header block-inner">
 	  		<div class="top-left-header">
 		  		<a class="header-logo">
 		  			<img src="img/logo.png" alt="Логотип магазина стройматериалов «Техномарт»" width="220" height="47">
 		  		</a>
 
-		  		<form action="https://htmlacademy.ru/echo" method="post">
+		  		<form class="main-search" action="https://htmlacademy.ru/echo" method="post">
 		  			<label class="visually-hidden" for="catalog-search">
 		  				Поиск по каталогу
 		  			</label>
 
-	  				<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-	  				<input type="submit" value="Поиск">
-	  				<input type="text" name="search" id="catalog-search" placeholder="Поиск:">		  			
+	  				<input class="main-search-input" type="text" name="search" id="catalog-search" placeholder="Поиск:">
+
+	  				<button class="main-search-button" type="submit">
+	  					Найти
+	  					<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+	  						<path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+	  					</svg>
+	  				</button>
 		  		</form>
 		  	</div>
 
@@ -41,7 +46,7 @@
 		  	</div>
 		</div>
 
-		<div class="middle-header">
+		<div class="middle-header block-inner">
 	  		<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
 	  		<div class="header-contacts">
@@ -57,7 +62,7 @@
 	  		</ul>
 		</div>
 
-  		<nav class="main-nav">
+  		<nav class="main-nav block-inner">
   			<ul class="site-nav">                         <!-- Ссылки пока оставил -->
 	  			<li><a href="index.html">Главная</a></li>
 	          	<li><a href="about.html">Компания</a></li>
@@ -123,7 +128,7 @@
 		  				<button class="btn-slider btn-slider-next" type="button"><img src="img/icon-right.svg" width="22" height="40" alt="Направо"></button>
 		  				<button class="btn-slider-toggle"><img src="http://placehold.it/5x5"></button>
 		  				<button class="btn-slider-toggle"><img src="http://placehold.it/5x5"></button>
-		  				<a href="catalog.html">Открыть каталог</a>
+		  				<a class="red-button catalog-open" href="catalog.html">Открыть каталог</a>
 	  				</div>
 		  		</div>  			
 
@@ -146,11 +151,11 @@
 
   		<section class="popular-items">
   			<div class="popular-items-wrapper">
-  				<h2>
+  				<h2 class="blue-heading">
   					Популярные товары
 	  			</h2>
 
-	  			<a class="btn-popular-items" href="catalog.html/popular" title="Посмотреть все популярные товары">
+	  			<a class="red-button btn-popular-items" href="catalog.html/popular" title="Посмотреть все популярные товары">
 	  				Все популярные товары
 	  			</a>
   			</div>
@@ -272,11 +277,11 @@
 
 		<section class="popular-brands">			
 			<div class="popular-brands-wrapper">
-				<h2>
+				<h2 class="blue-heading">
   				Популярные производители
 	  			</h2>
 
-	  			<a class="btn-popular-brands" href="brands.html/popular" title="Посмотреть всех популярных производителей">
+	  			<a class="red-button btn-popular-brands" href="brands.html/popular" title="Посмотреть всех популярных производителей">
 	  				Все популярные производители
 	  			</a>
 			</div>
@@ -310,7 +315,7 @@
 		</section>
 
 		<section class="services">
-			<h2>
+			<h2 class="blue-heading">
 				Сервисы
 			</h2>
 
@@ -360,7 +365,7 @@
 			<h2 class="visually-hidden">Информация о компании</h2>
 
 			<div class="company-information">			
-				<h3>
+				<h3 class="blue-heading">
 					Компания «ТЕХНОМАРТ»
 				</h3>
 
@@ -375,13 +380,13 @@
 					<li>— ЖелДорЭкспедиция</li>
 				</ul>
 
-				<a class="btn-company-about" href="about.html">
+				<a class="red-button btn-company-about" href="about.html">
 					Подробнее о компании
 				</a>
 			</div>
 
 			<div class="company-contacts">
-				<h3>
+				<h3 class="blue-heading">
 					Контакты
 				</h3>
 
@@ -390,7 +395,7 @@
 
 				<a href="https://goo.gl/maps/XiqMPQNWH2U2"><img src="img/map-preview.png" width="300" height="158" alt="Карта местонахождения"></a>
 
-				<a class="btn-contacts" href="#">Заблудились? Напишите нам!</a> <!-- не знаю какую ссылку ставить -->
+				<a class="red-button btn-contacts" href="#">Заблудились? Напишите нам!</a> <!-- не знаю какую ссылку ставить -->
 			</div>
 		</section>
   	</main>
