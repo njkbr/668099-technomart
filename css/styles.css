@@ -383,14 +383,13 @@ h1 {
 }
 
 .item-price {
-	/*display: block;*/
-	/*width: 122px;*/
-	/*height: 38px;*/
-	/*line-height: 38px;*/
-	/*margin: auto;*/
-	/*text-align: center;*/
-/*	background-color: red;*/
-	background-image: url(img/red-button.png);    /*Не получается отцентрировать по высоте*/
+	display: inline-block;
+	width: 122px;
+	height: 38px;
+	padding-top: 10px;
+	text-align: center;
+
+	background-image: url(../img/red-button.svg);
 }
 
 .btn-cart,
@@ -401,7 +400,7 @@ h1 {
 	line-height: 18px;
 	text-transform: uppercase;
 	border-radius: 2px;
-	border: none;  /*Не знаю как стили обнулить (3Д-эффект)*/
+	border: none;
 }
 
 .btn-cart {
