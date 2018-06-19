@@ -116,16 +116,17 @@ h1 {
 	color: #32455c;
 }
 
+.login-link,
+.reg-link {      
+	background-color: #ffffff;
+}
+
+
 .login-link a,
 .reg-link a {
 	font-size: 21px;
 	line-height: 21px;
 	color: #000000;
-}
-
-.login-link,
-.reg-link {      /*  Как впоследствии стилизовать кнопки? здесь или ниже отдельным блоком? */
-
 }
 
 .main-nav {
@@ -343,12 +344,13 @@ h1 {
 	color: #ffffff;
 }
 
-.popular-items h2,              /*Почему-то по умолчанию шрифт жирный*/
+.popular-items h2,
 .popular-brands h2,
 .services h2,
 .company-information h3,
 .company-contacts h3 {
 	font-size: 30px;
+	font-weight: normal;
 	line-height: 30px;
 	text-transform: uppercase;
 	color: #32425c;
@@ -389,13 +391,11 @@ h1 {
 	/*display: block;*/
 	width: 122px;
 	height: 38px;
+	line-height: 38px;
 	margin: auto;
 	/*text-align: center;*/
-	background-color: #ee3643;    /*Не получается отцентрировать по высоте*/
-}
-
-.item-price::after {          /*    Не знаю как добавить стрелку-треугольник*/
-	content: "";
+	/*background-color: red;*/
+	background-image: url(img/red-button.svg);    /*Не получается отцентрировать по высоте*/
 }
 
 .btn-cart,
@@ -648,7 +648,7 @@ h1 {
 }
 
 .user-logout span:focus {
-	color: rgba(0, 0, 0, 0.3);  /*не работает*/
+	color: rgba(255, 0, 0, 0.3);  /*не работает*/
 }
 
 .breadcrumbs {
@@ -681,12 +681,6 @@ h1 {
 	border: none;
 }
 
-.brands-filter:disabled,
-.power-filter:disabled {
-
-	opacity: 0.4;           /*Почему-то лейблы недизаблятся*/
-}
-
 .filter-type {
 	font-family: "PT Sans";
 	font-size: 17px;
@@ -703,6 +697,12 @@ h1 {
 	line-height: 20px;
 	color: #000000;
 	text-transform: uppercase;
+}
+
+.brands-filter:disabled + label,
+.power-filter:disabled + label {
+
+	opacity: 0.4;           /*Почему-то лейблы недизаблятся*/
 }
 
 .btn-show {
