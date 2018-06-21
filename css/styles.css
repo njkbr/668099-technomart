@@ -102,9 +102,20 @@ textarea:focus {
 	background-color: #212a3a;
 }
 
+.main-search-input:hover + button {
+	background-color: #212a3a;
+}
+
 .main-search-input:focus {
-	color: #000000;
 	background-color: #ffffff;
+}
+
+.main-search-input:focus + button {
+	background-color: #ffffff;
+}
+
+.main-search-input:focus + button path {
+	fill: red;
 }
 
 .btn-order {
@@ -442,7 +453,7 @@ h1 {
 
 .popular-item:hover,
 .catalog-item:hover {
-	border: transparent;
+	border-color: transparent;
 	box-shadow: 0 10px 25px 0px rgba(41,52,73,0.5); /*не знаю как менять картинку на кнопки*/
 }
 
