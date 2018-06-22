@@ -38,7 +38,7 @@ textarea:focus {
 	list-style: none;
 }
 
-/*.visually-hidden { */
+.visually-hidden { 
   position: absolute; 
   overflow: hidden; 
   clip: rect(0 0 0 0); 
@@ -49,12 +49,14 @@ textarea:focus {
   border: 0; 
 }
 
-.block-inner {
+.block-inner,
+.top-header-wrap {
   width: 940px;
   margin: 0px auto;
 }
 
 .main-header {
+	min-height: 320px;
 	background-color: #f4f7f9;
 }
 
@@ -63,6 +65,11 @@ textarea:focus {
 	line-height: 18px;
 
 	background-color: #293449;
+}
+
+.top-header-wrap {
+	display: flex;
+	height: 42px;
 }
 
 .main-search{
@@ -118,15 +125,35 @@ textarea:focus {
 	fill: red;
 }
 
+.top-right-header {
+
+}
+
 .btn-order {
 	background-color: #63a63e;
 }
 
-h1 {
+.middle-header {
+	display: flex;
+	min-height: 158px;
+}
+
+.middle-header h1 {
+	width: 300px;
+	min-height: 158px;
+	margin: 0;
+	padding-left: 52px;
+	padding-top: 48px;
 	font-size: 16px;
 	font-style: italic;
+	font-weight: normal;
 	line-height: 23px;
 	color: #ee3643;
+}
+
+.header-contacts {
+	width: 300px;      /*????*/
+	height: 158px;
 }
 
 .phone {
@@ -213,7 +240,6 @@ h1 {
 	background-color: #1d2739;
 }
 
-        /*Не знаю правильно ли здесь собирать схожие по стилю элементы?*/
 .red-button {
 	font-size: 14px;
 	line-height: 18px;
@@ -246,16 +272,6 @@ h1 {
 	height: 47px;
 }
 
-.top-left-header {
-	margin: 0px;
-	padding: 0px;
-}
-
-.top-right-header {
-	margin: 0px;
-	padding: 0px;
-}
-
 .top-header {
 	display: flex;
 }
@@ -264,9 +280,6 @@ h1 {
 	display: flex;
 }
 
-.middle-header {
-	display: flex;
-}
 
 .site-nav {
 	display: flex;
