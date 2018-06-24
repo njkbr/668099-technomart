@@ -32,6 +32,7 @@ textarea:focus {
 
 .user-nav {
 	list-style: none;
+	display: flex;
 }
 
 .catalog-nav-right ul {
@@ -69,6 +70,7 @@ textarea:focus {
 
 .top-header-wrap {
 	display: flex;
+	justify-content: space-between;
 	height: 42px;
 }
 
@@ -126,15 +128,35 @@ textarea:focus {
 }
 
 .top-right-header {
+	display: flex;
+	justify-content: space-between;
+}
 
+.top-right-btn {
+	width: 150px;
+	text-align: center; 
 }
 
 .btn-order {
+	padding-top: 11px;
 	background-color: #63a63e;
 }
 
+.cart {
+	padding-top: 11px;
+}
+
+.bookmarks {
+	padding-top: 11px;
+}
+
+
+
+
 .middle-header {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	min-height: 158px;
 }
 
