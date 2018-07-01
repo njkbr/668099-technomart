@@ -30,11 +30,6 @@ textarea:focus {
 	outline: none;
 }
 
-.user-nav {
-	list-style: none;
-	display: flex;
-}
-
 .catalog-nav-right ul {
 	list-style: none;
 }
@@ -80,15 +75,17 @@ textarea:focus {
 
 .main-search-input {
 	background-color: #293449;
+	padding-left: 10px;
 	border: none;
 	order: 2;
 }
 
 .main-search-button{
-  font-size: 0;
-  background-color: #293449;
-  border: none;
-  order: 1;
+	padding-left: 16px;
+	font-size: 0;
+	background-color: #293449;
+	border: none;
+	order: 1;
 }
 
 .main-search-input::-webkit-input-placeholder {
@@ -115,6 +112,10 @@ textarea:focus {
 	background-color: #212a3a;
 }
 
+.main-search-input:hover + button path{
+	fill: white;
+}
+
 .main-search-input:focus {
 	background-color: #ffffff;
 }
@@ -137,6 +138,16 @@ textarea:focus {
 	text-align: center; 
 }
 
+.bookmarks svg {
+	padding-top: 1px;
+	/*padding-right: 8px;*/ /*Не могу отоддвинуть свг*/
+}
+
+.cart svg {
+	padding-top: 1px;
+	/*padding-right: 10px;*/ /*Не могу отоддвинуть свг*/
+}
+
 .btn-order {
 	padding-top: 11px;
 	background-color: #63a63e;
@@ -150,12 +161,22 @@ textarea:focus {
 	padding-top: 11px;
 }
 
+.top-right-btn:hover path,
+.top-right-btn:hover circle{
+	fill: white;
+}
+
+.top-right-btn:focus path,
+.top-right-btn:focus circle{
+	fill: rgba(255,255,255,0.5);
+}
+
 
 
 
 .middle-header {
 	display: flex;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	align-items: center;
 	min-height: 158px;
 }
@@ -174,23 +195,44 @@ textarea:focus {
 }
 
 .header-contacts {
-	width: 300px;      /*????*/
+	width: 320px;
 	height: 158px;
+	/*text-align: center;*/
+	/*padding-top: 24px;*/
+	/*padding-left: 20px;*/
 }
 
 .phone {
+	position: relative;
+	width: 270px;
+	margin-left: 20px;
+	margin-top: 46px;
+	margin-bottom: 0px;
+	padding-top: 9px;
+	padding-left: 47px;
+	padding-bottom: 9px;
 	font-size: 21px;
 	line-height: 21px;
 	color: #ee3643;
 
 	border: 3px solid #ffffff;
-	padding: 9px 49px;
 }
 
 .address {
 	font-size: 14px;
 	line-height: 24px;
-	color: #32455c;
+	margin-left: 30px;
+	margin-top: 4px;
+	color: #32455c;	
+}
+
+.user-nav {
+	list-style: none;
+	display: flex;
+	width: 300px;
+	min-height: 158px;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
 }
 
 .login-link,
@@ -198,6 +240,12 @@ textarea:focus {
 	background-color: #ffffff;
 }
 
+.user-nav a {
+	position: relative;
+	display: block;
+	height: 45px;
+	margin-top: 46px;
+}
 
 .login-link a,
 .reg-link a {
@@ -206,14 +254,26 @@ textarea:focus {
 	color: #000000;
 }
 
-.main-nav {
-	font-size: 17px;
-	line-height: 27px;
-
-	background-color: #32425c; /*Ограничить по ширине 940пикс и добавить тень*/
+.login-link a {
+	margin-left: 10px;
+	padding-left: 47px;
+	padding-right: 26px;
+	padding-top: 13px;
 }
 
-                      /*Не знаю как сделать стиль для инпута-поиска*/
+.reg-link a {
+	margin-left: 10px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 13px;
+}
+
+.main-nav {
+	font-size: 17px;
+	line-height: 17px;
+
+	background-color: #32425c;
+}
 
 .catalog-nav-top h3,
 .catalog-nav-right h3 {
@@ -246,6 +306,14 @@ textarea:focus {
 .login-link a:hover,
 .reg-link a:hover {
 	color: #ee3643;
+}
+
+.login-link:hover path {
+	fill: #32425c;
+}
+
+.login-link:focus path {
+	fill: rgba(50, 66, 92, 0.3);
 }
 
 .login-link a:focus,
@@ -285,10 +353,6 @@ textarea:focus {
 	background-color: #b2b2b2;
 }
 
-.main-header {
-	min-height: 260px;
-}
-
 .header-logo {
 	width: 220px;
 	height: 47px;
@@ -305,7 +369,46 @@ textarea:focus {
 
 .site-nav {
 	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
+	justify-content: center;
+	width: 940px;
+	margin: 0px;
+	padding: 0px;
+
+	box-shadow: 0px 5px 0px #293449;
+}
+.site-nav li a {
+	display: block;
+	vertical-align: middle;
+}
+
+.site-nav li:first-child a {
+	padding: 19px 33px 19px 30px;
+}
+
+.site-nav li:nth-child(2) a {
+	padding: 19px 31px 19px 30px;
+}
+
+.site-nav li:nth-child(3) a {
+	padding: 19px 30px 19px 28px;
+}
+
+.site-nav li:nth-child(4) a {
+	padding: 19px 31px 19px 31px;
+}
+
+.site-nav li:nth-child(5) a {
+	padding: 19px 31px 19px 28px;
+}
+
+.site-nav li:nth-child(6) a {
+	padding: 19px 32px 19px 31px;
+}
+
+.site-nav li:last-child a {
+	padding: 19px 31px 19px 30px;
 }
 
 .catalog-nav-top ul {
