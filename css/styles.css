@@ -411,9 +411,51 @@ textarea:focus {
 	padding: 19px 31px 19px 30px;
 }
 
-.catalog-nav-top ul {
+.catalog-nav-top,
+.catalog-nav-right {
 	display: flex;
+}
+
+.catalog-nav-top ul,
+.catalog-nav-right ul {
+	display: flex;
+	justify-content: flex-end;
 	list-style: none;
+	padding-left: 0px;
+}
+
+.catalog-nav-bottom {
+	display: flex;
+}
+
+.catalog-nav-right ul {
+	flex-direction: column;
+}
+
+.preview {
+	position: relative;
+	width: 300px;
+	height: 123px;
+}
+
+.preview-1 {
+	background-color: #ffbf47;
+}
+
+.preview-2 {
+	background-color: #3bbce3;
+}
+
+.preview-3 {
+	background-color: #dc91d8;
+}
+
+.preview-4 {
+	background-color: #8ed78f;
+}
+
+.preview-5 {
+	background-color: #ffc047;
 }
 
 .popular-items-catalog {
